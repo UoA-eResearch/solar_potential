@@ -1,0 +1,2691 @@
+<Map srs="+init=epsg:3857" background-color="transparent">
+	<Style name="OrRd">
+		<Rule>
+			<RasterSymbolizer>
+				<RasterColorizer default-color="transparent" default-mode="discrete">
+					<stop color="#fff7ec" value="100"></stop>
+					<stop color="#fee8c8" value="250"></stop>
+					<stop color="#fdd49e" value="400"></stop>
+					<stop color="#fdbb84" value="550"></stop>
+					<stop color="#fc8d59" value="700"></stop>
+					<stop color="#ef6548" value="850"></stop>
+					<stop color="#d7301f" value="1000"></stop>
+					<stop color="#b30000" value="1150"></stop>
+					<stop color="#7f0000" value="1300"></stop>
+				</RasterColorizer>
+			</RasterSymbolizer>
+		</Rule>
+	</Style>
+	<Layer name="Rasters_bands/AbbottsPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AbbottsPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Aberfeldy_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Aberfeldy_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Akarana_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Akarana_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Albany_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Albany_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Ambury_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Ambury_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Aorere_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Aorere_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Arahanga_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Arahanga_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ArchHill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ArchHill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ArmourBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ArmourBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ArmyBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ArmyBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/AucklandCentralEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AucklandCentralEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/AucklandCentralWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AucklandCentralWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/AucklandHarbourside_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AucklandHarbourside_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/AvondaleSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AvondaleSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/AvondaleWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/AvondaleWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Awaruku_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Awaruku_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Balmoral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Balmoral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Bayswater_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Bayswater_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BeachhavenNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BeachhavenNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BeachhavenSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BeachhavenSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BeachlandsMaraetai_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BeachlandsMaraetai_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Beaumont_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Beaumont_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Birdwood_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Birdwood_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BirkdaleNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BirkdaleNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BirkdaleSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BirkdaleSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BirkenheadEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BirkenheadEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Bleakhouse_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Bleakhouse_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BledisloePark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BledisloePark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BlockhouseBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BlockhouseBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Bombay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Bombay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BotanyDowns_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BotanyDowns_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Bremner_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Bremner_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BrownsBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BrownsBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BucklandsBeachSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BucklandsBeachSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/BucklandsandEasternBeaches_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/BucklandsandEasternBeaches_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Burbank_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Burbank_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Burswood_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Burswood_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CampbellsBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CampbellsBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CastorBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CastorBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Chelsea_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Chelsea_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ClendonNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ClendonNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ClendonSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ClendonSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CloverPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CloverPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CockleBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CockleBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CrownHill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CrownHill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/CrumPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/CrumPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/DairyFlatRedvale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/DairyFlatRedvale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Dannemora_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Dannemora_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Dingwall_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Dingwall_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/DonegalPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/DonegalPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/DurhamGreen_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/DurhamGreen_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EdenRoadHillTop_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EdenRoadHillTop_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EdenTerrace_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EdenTerrace_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Edgewater_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Edgewater_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Edmonton_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Edmonton_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EllerslieNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EllerslieNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EllerslieSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EllerslieSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ElsmorePark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ElsmorePark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EpsomCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EpsomCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EpsomNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EpsomNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/EpsomSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/EpsomSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Fairburn_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Fairburn_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Fairdene_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Fairdene_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Fairview_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Fairview_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/FavonaNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/FavonaNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/FavonaSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/FavonaSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/FavonaWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/FavonaWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Ferguson_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Ferguson_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Ferndale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Ferndale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/FlatBush_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/FlatBush_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ForrestHill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ForrestHill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/FreemansBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/FreemansBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Fruitvale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Fruitvale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Glamorgan_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Glamorgan_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenEdenEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenEdenEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenInnesEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenInnesEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenInnesNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenInnesNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenInnesWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenInnesWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Glenavon_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Glenavon_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlendeneNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlendeneNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlendeneSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlendeneSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Glendhu_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Glendhu_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Glendowie_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Glendowie_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenfieldCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenfieldCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GlenfieldNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GlenfieldNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Golfland_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Golfland_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GraftonEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GraftonEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GraftonWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GraftonWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Grange_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Grange_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GreenBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GreenBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Greenhithe_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Greenhithe_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GreyLynnEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GreyLynnEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GreyLynnWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GreyLynnWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/GulfHarbour_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/GulfHarbour_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HalfMoonBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HalfMoonBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hamlin_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hamlin_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HaraniaEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HaraniaEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HaraniaNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HaraniaNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HaraniaWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HaraniaWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HatfieldsBeach_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HatfieldsBeach_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hauraki_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hauraki_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HendersonNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HendersonNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HendersonSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HendersonSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HendersonWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HendersonWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Herald_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Herald_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HerneBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HerneBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hillpark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hillpark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HillsboroughEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HillsboroughEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HillsboroughWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HillsboroughWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hingaia_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hingaia_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hobsonville_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hobsonville_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HomaiEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HomaiEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HomaiWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HomaiWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HowickCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HowickCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/HowickWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/HowickWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Hyperion_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Hyperion_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kaipatiki_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kaipatiki_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/KauriPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/KauriPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kaurilands_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kaurilands_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kawau_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kawau_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/KelstonCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/KelstonCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kilkenny_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kilkenny_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kingdale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kingdale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kingsland_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kingsland_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/KohimaramaEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/KohimaramaEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/KohimaramaWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/KohimaramaWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Kohuora_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Kohuora_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Konini_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Konini_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Laingholm_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Laingholm_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/LakePupuke_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/LakePupuke_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Leabank_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Leabank_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/LongBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/LongBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/LuckenPoint_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/LuckenPoint_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/LynfieldNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/LynfieldNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/LynfieldSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/LynfieldSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Lynnmall_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Lynnmall_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MairangiBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MairangiBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MangereBridge_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MangereBridge_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MangereCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MangereCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MangereEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MangereEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MangereStation_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MangereStation_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Manly_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Manly_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ManurewaCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ManurewaCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ManurewaEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ManurewaEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Mascot_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Mascot_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MasseyPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MasseyPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MasseyWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MasseyWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Matipo_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Matipo_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Maungamaungaroa_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Maungamaungaroa_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Maungawhau_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Maungawhau_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/McLarenPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/McLarenPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Mcleod_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Mcleod_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MeadowbankNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MeadowbankNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MeadowbankSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MeadowbankSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MellonsBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MellonsBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Middlemore_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Middlemore_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Millhouse_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Millhouse_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MissionBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MissionBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MonarchPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MonarchPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtAlbertCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtAlbertCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtEdenEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtEdenEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtEdenNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtEdenNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtEdenSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtEdenSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtHobson_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtHobson_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtStJohn_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtStJohn_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtVictoria_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtVictoria_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MtWellingtonNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MtWellingtonNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MuriwaiBeach_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MuriwaiBeach_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/MurraysBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/MurraysBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Murvale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Murvale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NarrowNeck_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NarrowNeck_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NewLynnNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NewLynnNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NewLynnSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NewLynnSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NewWindsor_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NewWindsor_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Newmarket_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Newmarket_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Newton_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Newton_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NorthHarbourEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NorthHarbourEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NorthHarbourWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NorthHarbourWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/NorthcoteSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/NorthcoteSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Northcross_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Northcross_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Oaktree_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Oaktree_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OceanView_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OceanView_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OneTreeHillCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OneTreeHillCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OneTreeHillEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OneTreeHillEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OnehungaNorthEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OnehungaNorthEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OnehungaNorthWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OnehungaNorthWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OnehungaSouthEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OnehungaSouthEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OnehungaSouthWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OnehungaSouthWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Opaheke_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Opaheke_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Opanuku_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Opanuku_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OrakeiNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OrakeiNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OrakeiSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OrakeiSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Oranga_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Oranga_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Orewa_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Orewa_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Ormiston_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Ormiston_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtahuhuEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtahuhuEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtahuhuNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtahuhuNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtahuhuWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtahuhuWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtaraEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtaraEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtaraNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtaraNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtaraSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtaraSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OtaraWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OtaraWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Otimai_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Otimai_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OwairakaEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OwairakaEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/OwairakaWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/OwairakaWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PaerataCapeHill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PaerataCapeHill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Pahurehure_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Pahurehure_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PakurangaCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PakurangaCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PakurangaEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PakurangaEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PakurangaNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PakurangaNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PalmHeights_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PalmHeights_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PanmureBasin_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PanmureBasin_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapakuraCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapakuraCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapakuraEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapakuraEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapakuraNorthEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapakuraNorthEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapakuraNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapakuraNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapakuraSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapakuraSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapatoetoeCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapatoetoeCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapatoetoeEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapatoetoeEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapatoetoeNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapatoetoeNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PapatoetoeWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PapatoetoeWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ParemoremoEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ParemoremoEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ParemoremoWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ParemoremoWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ParnellEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ParnellEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ParnellWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ParnellWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ParrsPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ParrsPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PigeonMountainNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PigeonMountainNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PigeonMountainSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PigeonMountainSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Pinehill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Pinehill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PointChevalierEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PointChevalierEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PointChevalierSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PointChevalierSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PointChevalierWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PointChevalierWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PointEngland_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PointEngland_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PointView_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PointView_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PonsonbyEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PonsonbyEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PonsonbyWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PonsonbyWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Puhinui_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Puhinui_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PukekoheNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PukekoheNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/PukekoheWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/PukekoheWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RandwickPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RandwickPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RanuiDomain_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RanuiDomain_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RanuiSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RanuiSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RedBeach_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RedBeach_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RedHill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RedHill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RedoubtNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RedoubtNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RedoubtSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RedoubtSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RemueraSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RemueraSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RemueraWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RemueraWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Rewarewa_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Rewarewa_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Roberton_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Roberton_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Rosebank_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Rosebank_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Rosehill_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Rosehill_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RothesayBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RothesayBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Rowandale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Rowandale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RoyalHeights_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RoyalHeights_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RoyalOak_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RoyalOak_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/RoyalRoadWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/RoyalRoadWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Runciman_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Runciman_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SandringhamEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SandringhamEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SandringhamNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SandringhamNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SandringhamWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SandringhamWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Seacliffe_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Seacliffe_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ShellyPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ShellyPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Sherbourne_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Sherbourne_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SilverdaleNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SilverdaleNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SilverdaleSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SilverdaleSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Springleigh_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Springleigh_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StHeliers_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StHeliers_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StJohns_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StJohns_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StLukesNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StLukesNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StLukes_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StLukes_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StMarys_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StMarys_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StanleyBay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StanleyBay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StanmoreBayEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StanmoreBayEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StanmoreBayWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StanmoreBayWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/StarlingPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/StarlingPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SturgesNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SturgesNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Sunnybrae_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Sunnybrae_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Sunnyhills_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Sunnyhills_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Sunnynook_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Sunnynook_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Sunnyvale_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Sunnyvale_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/SurreyCrescent_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/SurreyCrescent_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Swanson_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Swanson_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TakaniniNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TakaniniNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TakaniniSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TakaniniSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TakaniniWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TakaniniWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TakapunaCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TakapunaCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Tamaki_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Tamaki_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Tangutu_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Tangutu_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TargetRoad_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TargetRoad_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Taupaki_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Taupaki_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TeAtatuCentral_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TeAtatuCentral_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TePapapa_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TePapapa_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/ThreeKings_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/ThreeKings_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TitirangiSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TitirangiSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Torbay_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Torbay_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TotaraHeights_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TotaraHeights_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/TuffCrater_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/TuffCrater_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Turanga_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Turanga_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/UnsworthHeights_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/UnsworthHeights_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Urlich_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Urlich_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Vipond_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Vipond_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Viscount_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Viscount_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WadeHeads_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WadeHeads_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waiake_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waiake_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waiata_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waiata_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WaikowhaiEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WaikowhaiEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WaikowhaiWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WaikowhaiWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waima_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waima_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WaimumuNorth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WaimumuNorth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WaimumuSouth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WaimumuSouth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WaipareiraWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WaipareiraWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Wairere_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Wairere_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waitakere_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waitakere_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waitaramoa_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waitaramoa_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waiwera_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waiwera_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Wakeling_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Wakeling_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Walmsley_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Walmsley_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Warkworth_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Warkworth_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Waterview_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Waterview_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WattleFarm_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WattleFarm_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Wesley_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Wesley_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WestHarbour_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WestHarbour_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Westgate_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Westgate_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Westlake_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Westlake_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Westmere_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Westmere_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WeymouthEast_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WeymouthEast_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WeymouthWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WeymouthWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WhenuapaiWest_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WhenuapaiWest_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WindsorPark_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WindsorPark_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/WindyRidge_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/WindyRidge_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Wiri_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Wiri_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Witheford_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Witheford_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Rasters_bands/Woodglen_4bands.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Rasters_bands/Woodglen_4bands.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+</Map>

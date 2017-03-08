@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://openlayers.org/en/v3.19.1/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="http://cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.css" type="text/css">
+    <style>
+      html, body, .map {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #a3ccff;
+      }
+    </style>
+    <script src="https://openlayers.org/en/v3.19.1/build/ol-debug.js" type="text/javascript"></script>
+    <script src="http://cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.js" type="text/javascript"></script>
+    <title>Solar Potential Map</title>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var extent = [17745294.397799145, -6212398.735764966, 21273479.234843332, -3501802.3644446055];
+
+      var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+        formatConstructors: [
+          ol.format.GPX,
+          ol.format.GeoJSON,
+          ol.format.IGC,
+          ol.format.KML,
+          ol.format.TopoJSON
+        ]
+      });
+
+      var overlayGroup = new ol.layer.Group({
+        'title': 'Overlays',
+        zIndex: 10,
+        layers: [
+          new ol.layer.Tile({
+            title: 'Solar potential',
+            source: new ol.source.XYZ({
+              url: '/solar_potential/{z}/{x}/{y}.png'
+            }),
+            extent: extent
+          }),
+          new ol.layer.Tile({
+            title: 'City labels',
+            source: new ol.source.Stamen({
+              layer: 'toner-labels',
+            }),
+            extent: extent,
+            opacity: .5
+          })
+        ]
+      });
+
+      var layerswitcher = new ol.control.LayerSwitcher();
+
+      var map = new ol.Map({
+        controls: ol.control.defaults().extend([
+          new ol.control.ScaleLine(),
+          new ol.control.ZoomSlider(),
+          layerswitcher
+        ]),
+        target: 'map',
+        interactions: ol.interaction.defaults().extend([
+          dragAndDropInteraction
+        ]),
+        layers: [
+          new ol.layer.Group({
+            'title': 'Base maps',
+            layers: [
+              new ol.layer.Tile({
+                title: 'Terrain',
+                source: new ol.source.Stamen({
+                  layer: 'terrain-background'
+                })
+              }),
+              new ol.layer.Tile({
+                title: 'Roads',
+                source: new ol.source.Stamen({
+                  layer: 'terrain-lines'
+                })
+              })
+            ]
+          }),
+          overlayGroup
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([173, -40]),
+          zoom: 6,
+          minZoom: 6,
+          maxZoom: 19,
+          extent: extent
+        })
+      });
+
+      dragAndDropInteraction.on('addfeatures', function(event) {
+        console.log(event);
+        var vectorSource = new ol.source.Vector({
+          features: event.features
+        });
+        overlayGroup.getLayers().push(new ol.layer.Vector({
+          title: event.file.name,
+          source: vectorSource,
+          //style: styleFunction
+        }));
+        map.getView().fit(
+            vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
+        );
+      });
+    </script>
+  </body>
+</html>

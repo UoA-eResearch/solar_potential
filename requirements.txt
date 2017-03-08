@@ -1,0 +1,4 @@
+redis
+mapnik
+xmltodict
+TileStache
