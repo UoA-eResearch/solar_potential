@@ -37,7 +37,7 @@
           new ol.layer.Tile({
             title: 'Solar potential',
             source: new ol.source.XYZ({
-              url: '/solar_potential/{z}/{x}/{y}.png'
+              url: 'tiles/solar_potential/{z}/{x}/{y}.png'
             }),
             extent: extent
           }),
@@ -85,8 +85,8 @@
           overlayGroup
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([173, -40]),
-          zoom: 6,
+          center: ol.proj.fromLonLat([174.766462, -36.891249]),
+          zoom: 11,
           minZoom: 6,
           maxZoom: 19,
           extent: extent
