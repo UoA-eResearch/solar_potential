@@ -8,6 +8,21 @@
         width: 100%;
         background-color: #a3ccff;
       }
+      #legend {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: white;
+        padding: 5px;
+        width: 500px;
+        text-align: right;
+      }
+      #legend .colorbox {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        margin-right: 5px;
+      }
     </style>
     <script src="https://unpkg.com/openlayers@4.0.1" type="text/javascript"></script>
     <link rel="stylesheet" href="https://unpkg.com/openlayers@4.0.1/dist/ol.css" type="text/css">
@@ -15,12 +30,31 @@
     <link rel="stylesheet" href="//cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.css" type="text/css">
     <script src="https://unpkg.com/ol3-geocoder@2.5.0"></script>
     <link href="https://unpkg.com/ol3-geocoder@2.5.0/build/ol3-geocoder.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <title>Solar Potential Map</title>
   </head>
   <body>
     <div id="map" class="map"></div>
+    <div id="legend">Legend (kWh/m2): </div>
+    <div id="info"></div>
     <script type="text/javascript">
       var extent = [19339108.58970958, -4504204.6540832445, 19585408.110816702, -4335432.371497248];
+
+      var scheme = "OrRd";
+      var scale = 150;
+      var colors = {
+        'OrRd': ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000'],
+      }
+
+      for (var i = 0; i < colors[scheme].length; i++) {
+        var start = i * scale + 100;
+        var end = (i + 1) * scale + 100;
+        var rangeStr = start + "-" + end;
+        if (i + 1 == colors[scheme].length) {
+          rangeStr = start + "+";
+        }
+        $("#legend").append(rangeStr + ":<span class='colorbox' style='background-color:" + colors[scheme][i] + "'></span>");
+      }
 
       var dragAndDropInteraction = new ol.interaction.DragAndDrop({
         formatConstructors: [
