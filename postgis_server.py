@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import psycopg2
 import psycopg2.extras
-from bottle import Bottle, get, run, request, response
+from bottle import Bottle, get, run, request, response, abort
 
 DEC2FLOAT = psycopg2.extensions.new_type(
     psycopg2.extensions.DECIMAL.values,
@@ -29,10 +29,10 @@ def get_point():
       return {}
     lat = request.query.lat
     if not lat:
-      return {"error": "no lat given"}
+      abort(500, "no lat given")
     lng = request.query.lng
     if not lng:
-      return {"error": "no lng given"}
+      abort(500, "no lng given")
     sql = """SELECT *, ST_ASTEXT(ST_TRANSFORM(geom, '+init=epsg:2193', '+init=epsg:3857')) AS geom FROM buildings WHERE ST_CONTAINS(geom, ST_TRANSFORM(ST_POINT(%s, %s), '+init=epsg:3857', '+init=epsg:2193'));"""
     cur.execute(sql, (lng, lat))
     data = cur.fetchall()
