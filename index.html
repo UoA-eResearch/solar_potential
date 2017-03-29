@@ -148,7 +148,7 @@
           new ol.layer.Tile({
             title: 'Solar potential',
             source: new ol.source.XYZ({
-              url: '//ml.cer.auckland.ac.nz:8081/tiles/solar_potential/{z}/{x}/{y}.png'
+              url: '//web.ceres.auckland.ac.nz/solar_potential/tiles/solar_potential/{z}/{x}/{y}.png'
             }),
             extent: extent
           }),
@@ -235,7 +235,7 @@
 
       map.on('click', function(evt) {
         var coordinate = evt.coordinate;
-        $.get("//ml.cer.auckland.ac.nz:8082", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
+        $.get("//web.ceres.auckland.ac.nz/solar_potential/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
           if (data.results.length >= 1) {
             var r = data.results[0];
             console.log(r);
