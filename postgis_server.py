@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import psycopg2
 import psycopg2.extras
-from bottle import Bottle, get, run, request, response, abort, default_app
+from bottle import Bottle, get, run, request, response, abort
 
 DEC2FLOAT = psycopg2.extensions.new_type(
     psycopg2.extensions.DECIMAL.values,
@@ -11,9 +11,9 @@ psycopg2.extensions.register_type(DEC2FLOAT)
 conn = psycopg2.connect(dbname="solar_potential")
 cur = conn.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
 
-app = Bottle()
+application = Bottle()
 
-@app.hook('after_request')
+@application.hook('after_request')
 def enable_cors():
     """
     You need to add some headers to each request.
@@ -23,7 +23,7 @@ def enable_cors():
     response.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
 
-@app.get('/')
+@application.get('/')
 def get_point():
     if request.method == 'OPTIONS':
       return {}
@@ -37,8 +37,6 @@ def get_point():
     cur.execute(sql, (lng, lat))
     data = cur.fetchall()
     return {'results': data}
-
-application = default_app()
 
 if __name__ == "__main__":
     run(app, host='0.0.0.0', port=8082, debug=True)
