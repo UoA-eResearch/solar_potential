@@ -33,9 +33,12 @@ def get_point():
     lng = request.query.lng
     if not lng:
       abort(500, "no lng given")
-    sql = """SELECT *, ST_ASTEXT(ST_TRANSFORM(geom, '+init=epsg:2193', '+init=epsg:3857')) AS geom FROM buildings WHERE ST_CONTAINS(geom, ST_TRANSFORM(ST_POINT(%s, %s), '+init=epsg:3857', '+init=epsg:2193'));"""
+    sql = """SELECT *, ST_ASTEXT(ST_TRANSFORM(geom, '+init=epsg:2193', '+init=epsg:3857')) AS geom FROM solar_potential WHERE ST_CONTAINS(geom, ST_TRANSFORM(ST_POINT(%s, %s), '+init=epsg:3857', '+init=epsg:2193'));"""
     cur.execute(sql, (lng, lat))
     data = cur.fetchall()
     return {'results': data}
 
-run(app, host='0.0.0.0', port=8082, debug=True)
+application = bottle.default_app()
+
+if __name__ == "__main__":
+    run(app, host='0.0.0.0', port=8082, debug=True)
