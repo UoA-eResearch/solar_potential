@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import psycopg2
 import psycopg2.extras
-from bottle import Bottle, get, run, request, response, abort
+from bottle import Bottle, get, run, request, response, abort, default_app
 
 DEC2FLOAT = psycopg2.extensions.new_type(
     psycopg2.extensions.DECIMAL.values,
