@@ -38,7 +38,7 @@ def get_point():
     data = cur.fetchall()
     return {'results': data}
 
-application = bottle.default_app()
+application = default_app()
 
 if __name__ == "__main__":
     run(app, host='0.0.0.0', port=8082, debug=True)
