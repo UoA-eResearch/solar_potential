@@ -239,7 +239,14 @@
           if (data.results.length >= 1) {
             var r = data.results[0];
             console.log(r);
-            content.innerHTML = r.rev_addres + ', ' + r.rev_city + '<br>' + r.up_env + "<br>Roof color: <span class='colorbox' style='background-color: rgb(" + r.roofcol_r + ',' + r.roofcol_g + ',' + r.roofcol_b + ")'></span>";
+            if (r.address == '_ _') r.address = "Address unknown";
+            var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
+                         r.up_env,
+                         "Top 14m²: " + r.top14 + "kWh/m²",
+                         "Top 20m²: " + r.top20 + "kWh/m²",
+                         "Top 28m²: " + r.top28 + "kWh/m²",
+                         "Top 36m²: " + r.top36 + "kWh/m²"];
+            content.innerHTML = lines.join("<br>");
             overlay.setPosition(coordinate);
           }
         });
