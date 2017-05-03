@@ -39,4 +39,4 @@ def get_point():
     return {'results': data}
 
 if __name__ == "__main__":
-    run(app, host='0.0.0.0', port=8082, debug=True)
+    run(application, host='0.0.0.0', port=8082, debug=True)
