@@ -77,21 +77,61 @@
     <title>Solar Potential Map</title>
   </head>
   <body>
+    <div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspSolar Energy Potential</div>
     <div id="map" class="map"></div>
     <div id="legend">Legend (kWh/m2): </div>
     <div id="info"></div>
     <div id="popup" class="ol-popup">
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
       <div id="popup-content"></div>
+      <br>
+      <p>Please select solar panel type:</p>
+      <div id="popup-equipment">
+        <select id="Installation-Size">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+        <span>&nbsp &nbsp &nbsp &nbsp &nbsp</span>
+        <select id="Efficiency">
+          <option value="90">90%</option>
+          <option value="85">85%</option>
+          <option value="80">80%</option>
+          <option value="70">70%</option>
+        </select>
+        <div id="popup-estimate"></div>
+      </div>
     </div>
+
     <script type="text/javascript">
+
+      /**
+       * Global variables for map controls
+       */
       var extent = [19339108.58970958, -4504204.6540832445, 19585408.110816702, -4335432.371497248];
+
+
       /**
        * Elements that make up the popup.
        */
       var container = document.getElementById('popup');
       var content = document.getElementById('popup-content');
       var closer = document.getElementById('popup-closer');
+      var sizeElement = document.getElementById("Installation-Size");
+      var efficiencyElement = document.getElementById("Efficiency");
+      var estimateElement = document.getElementById('popup-estimate');
+      var layerswitcher = new ol.control.LayerSwitcher();
+      var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+          formatConstructors: [
+              ol.format.GPX,
+              ol.format.GeoJSON,
+              ol.format.IGC,
+              ol.format.KML,
+              ol.format.TopoJSON
+          ]
+      });
+
 
 
       /**
@@ -116,6 +156,10 @@
         return false;
       };
 
+
+      /**
+       * Set up the legend bar
+       */
       var scheme = "OrRd";
       var scale = 150;
       var colors = {
@@ -130,18 +174,12 @@
           rangeStr = start + "+";
         }
         $("#legend").append(rangeStr + ":<span class='colorbox' style='background-color:" + colors[scheme][i] + "'></span>");
-      }
+      };
 
-      var dragAndDropInteraction = new ol.interaction.DragAndDrop({
-        formatConstructors: [
-          ol.format.GPX,
-          ol.format.GeoJSON,
-          ol.format.IGC,
-          ol.format.KML,
-          ol.format.TopoJSON
-        ]
-      });
 
+      /**
+       * Add default layers from different sources
+       */
       var overlayGroup = new ol.layer.Group({
         'title': 'Overlays',
         zIndex: 10,
@@ -165,6 +203,9 @@
 
       var layerswitcher = new ol.control.LayerSwitcher();
 
+      /**
+       * Set up the map's layout, including layers, controls and view
+       */
       var map = new ol.Map({
         controls: ol.control.defaults().extend([
           new ol.control.ScaleLine(),
@@ -205,21 +246,10 @@
         })
       });
 
-      dragAndDropInteraction.on('addfeatures', function(event) {
-        console.log(event);
-        var vectorSource = new ol.source.Vector({
-          features: event.features
-        });
-        overlayGroup.getLayers().push(new ol.layer.Vector({
-          title: event.file.name,
-          source: vectorSource,
-          //style: styleFunction
-        }));
-        map.getView().fit(
-            vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
-        );
-      });
 
+      /**
+       * add a geocoder to map
+       */
       var geocoder = new Geocoder('nominatim', {
         provider: 'osm',
         key: '__some_key__',
@@ -234,26 +264,77 @@
       });
       map.addControl(geocoder);
 
-      map.on('click', function(evt) {
-        var coordinate = evt.coordinate;
-        $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
-          if (data.results.length >= 1) {
-            var r = data.results[0];
-            console.log(r);
-            if (r.address == '_ _') r.address = "Address unknown";
-            var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
-                         r.up_env,
-                         "Top 14m²: " + r.top14 + "kWh",
-                         "Top 20m²: " + r.top20 + "kWh",
-                         "Top 28m²: " + r.top28 + "kWh",
-                         "Top 36m²: " + r.top36 + "kWh",
-                         "Mean: " + r.mean + "kWh/m²",
-                         "Sum: " + r.sum + "kWh",
-                         ];
-            content.innerHTML = lines.join("<br>");
-            overlay.setPosition(coordinate);
-          }
-        });
+
+      /**
+       * Add a click handler to the map to render the popup.
+       */
+      map.on('singleclick', function(evt) {
+          var coordinate = evt.coordinate;
+          $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
+              if (data.results.length >= 1) {
+                  var r = data.results[0];
+                  console.log(r);
+                  var infoElement = document.getElementById('popup-content');
+                  var estimateElement = document.getElementById('popup-estimate');
+
+
+                  if (r.address == '_ _') r.address = "Address unknown";
+                  var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
+                      r.up_env,
+                      "Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + "kWh",
+                      "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + "kWh",
+                      "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + "kWh",
+                      "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + "kWh",
+                      "Mean: " + (parseInt(r.mean)).toString() + "kWh/m²",
+                      "Sum: " + (parseInt(r.sum)).toString() + "kWh",
+                  ];
+                  infoElement.innerHTML = lines.join("<br>");
+                  sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+                  efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+                  var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
+                  estimateElement.innerHTML = "Annual energy generation is: " + annualGeneration.toString();
+                  overlay.setPosition(coordinate);
+              } else {
+                  console.log('No available infor')
+              }
+          });
+      });
+
+      /**
+       * add event handlers to the select buttons to calculate and display annual electricity generation
+       * according to different equipment size and efficiency
+       */
+      sizeElement.addEventListener("change", function() {
+          sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+          efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
+          estimateElement.innerHTML = "Annual energy generation is: "+ annualGeneration.toString();
+      });
+
+      efficiencyElement.addEventListener("change", function() {
+          sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+          efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
+          estimateElement.innerHTML = "Annual energy generation is: "+ annualGeneration.toString();
+      });
+
+
+      /**
+       * add an event handler to the drag-and-drop-interaction function to load new layers
+       */
+      dragAndDropInteraction.on('addfeatures', function(event) {
+          console.log(event);
+          var vectorSource = new ol.source.Vector({
+              features: event.features
+          });
+          overlayGroup.getLayers().push(new ol.layer.Vector({
+              title: event.file.name,
+              source: vectorSource,
+              //style: styleFunction
+          }));
+          map.getView().fit(
+              vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
+          );
       });
     </script>
   </body>
