@@ -191,6 +191,14 @@
             source: new ol.source.XYZ({
               url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential/{z}/{x}/{y}.png'
             }),
+            extent: extent,
+            visible: false
+          }),
+          new ol.layer.Tile({
+            title: 'Solar potential (circles)',
+            source: new ol.source.XYZ({
+              url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
+            }),
             extent: extent
           }),
           new ol.layer.Tile({

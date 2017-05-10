@@ -2,6 +2,7 @@
 from xmltodict import unparse
 import json
 import glob
+import sys
 
 colors = {
   'OrRd': ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000'],
@@ -30,7 +31,7 @@ for name, l in colors.items():
   }
   styles.append(style)
 
-files = sorted(glob.glob("Rasters_bands/*.tif"))
+files = sorted(glob.glob(sys.argv[1] + "/*.tif"))
 layers = []
 for f in files:
   layer = {
