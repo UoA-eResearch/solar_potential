@@ -4,8 +4,12 @@ import json
 import glob
 import sys
 
-colors = {
+'''colors = {
   'OrRd': ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000'],
+}'''
+
+colors = {
+  'OrRd': ['#FFECB3','#FFE082','#FFD54F','#FFCA28','#FFC107','#FFB300','#FFA000','#FF8F00','#FF6F00'],
 }
 
 styles = []
