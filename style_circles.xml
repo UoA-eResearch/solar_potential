@@ -3,15 +3,15 @@
 		<Rule>
 			<RasterSymbolizer>
 				<RasterColorizer default-color="transparent" default-mode="discrete">
-					<stop color="#fff7ec" value="100"></stop>
-					<stop color="#fee8c8" value="250"></stop>
-					<stop color="#fdd49e" value="400"></stop>
-					<stop color="#fdbb84" value="550"></stop>
-					<stop color="#fc8d59" value="700"></stop>
-					<stop color="#ef6548" value="850"></stop>
-					<stop color="#d7301f" value="1000"></stop>
-					<stop color="#b30000" value="1150"></stop>
-					<stop color="#7f0000" value="1300"></stop>
+					<stop color="#FFECB3" value="100"></stop>
+					<stop color="#FFE082" value="250"></stop>
+					<stop color="#FFD54F" value="400"></stop>
+					<stop color="#FFCA28" value="550"></stop>
+					<stop color="#FFC107" value="700"></stop>
+					<stop color="#FFB300" value="850"></stop>
+					<stop color="#FFA000" value="1000"></stop>
+					<stop color="#FF8F00" value="1150"></stop>
+					<stop color="#FF6F00" value="1300"></stop>
 				</RasterColorizer>
 			</RasterSymbolizer>
 		</Rule>
