@@ -38,7 +38,8 @@
         border: 1px solid #cccccc;
         bottom: 12px;
         left: -50px;
-        min-width: 280px;
+        min-width: 350px;
+        min-height: 450px;
       }
       .ol-popup:after, .ol-popup:before {
         top: 100%;
@@ -80,35 +81,47 @@
     <script src="https://unpkg.com/ol3-geocoder@2.5.0"></script>
     <link href="https://unpkg.com/ol3-geocoder@2.5.0/build/ol3-geocoder.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <title>Solar Potential Map</title>
   </head>
   <body>
+
   <div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspSolar Energy Potential</div>
     <div id="map" class="map"></div>
-    <div id="legend"><span style="color:white; font-family: Arial">Legend (kWh/m²): </div>
+    <div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²): </span></div>
     <div id="info"></div>
     <div id="popup" class="ol-popup">
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
+      <div id="popup-content" name="popup-content"></div>
+      <p><b>Annual Solar Energy Potential (kWh/m²):</b></p>
+      <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
       <br>
-      <p>Please select solar panel type:</p>
+      <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
+      <p><b>Please select solar panel type:</b></p>
       <div id="popup-equipment">
         Installation size (m²):
         <select id="Installation-Size">
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
+          <option value="60">20 m² standard 3 kW system</option>
+          <option value="175">35 m² standard 5 kW system</option>
+          <option value="350">50 m²standard 7 kW system</option>
         </select>
         <br>
         Efficiency:
         <select id="Efficiency">
-          <option value="90">90%</option>
-          <option value="85">85%</option>
-          <option value="80">80%</option>
-          <option value="70">70%</option>
+          <option value="15">Standard PV (15%)</option>
+          <option value="19">Premium PV (19%)</option>
+          <option value="10">Thin film PV (10%)</option>
         </select>
         <div id="popup-estimate"></div>
+      </div>
+      <br>
+      <div id="report-error">
+        <form id="issueForm" method="post" action="errorReport.php">
+          <b>Report an issue:</b><br>
+          <input type="text" id="issue" name="issue">
+          <br>
+          <input type="submit" value="Submit" id="submitButton">
+        </form>
       </div>
     </div>
 
@@ -295,16 +308,20 @@
        */
       map.on('singleclick', function(evt) {
           var coordinate = evt.coordinate;
+          var issueFormElement = document.getElementById('issue');
+          issueFormElement.value = '';
           $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
               if (data.results.length >= 1) {
                   var r = data.results[0];
                   console.log(r);
-                  var infoElement = document.getElementById('popup-content');
+                  /*var infoElement = document.getElementById('popup-content');*/
                   var estimateElement = document.getElementById('popup-estimate');
 
-
+                  var addressInfoElement = document.getElementById('popup-content');
+                  var solarInfoElement = document.getElementById('popup-solarenergyinfo');
+                  var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total')
                   if (r.address == '_ _') r.address = "Address unknown";
-                  var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
+                  /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
                       r.up_env,
                       "Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + "kWh/m²",
                       "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + "kWh/m²",
@@ -312,12 +329,23 @@
                       "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + "kWh/m²",
                       "Mean: " + (parseInt(r.mean)).toString() + "kWh/m²",
                       "Sum: " + (parseInt(r.sum)).toString() + "kWh",
-                  ];
-                  infoElement.innerHTML = lines.join("<br>");
+                  ];*/
+                  var addressInfo = ["<i>" + r.address.replace(/_/g, ', ') + "</i>", r.up_env];
+                  var solarInfo = ["Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
+                      "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + " kWh/m²",
+                  "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + " kWh/m²",
+                  "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + " kWh/m²",
+                  "&nbsp&nbsp"+"Average: " + (parseInt(r.mean)).toString() + " kWh/m²"];
+                  var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
+                  addressInfoElement.innerHTML = addressInfo.join("<br>");
+                  solarInfoElement.innerHTML = solarInfo.join("<br>");
+                  solarInfoTotalElement.innerHTML = "<b>" + "Annual Total:" + "</b>&nbsp"+ solarInfoTotal;
                   sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
                   efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-                  var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
-                  estimateElement.innerHTML = "Annual energy generation is: " + annualGeneration.toString();
+
+                  var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+                  console.log(annualGeneration);
+                  estimateElement.innerHTML = "Annual energy generation is: " + Math.round(annualGeneration).toString() + " kWh";
                   overlay.setPosition(coordinate);
               } else {
                   console.log('No available infor')
@@ -332,15 +360,15 @@
       sizeElement.addEventListener("change", function() {
           sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
           efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
-          estimateElement.innerHTML = "Annual energy generation is: "+ annualGeneration.toString();
+          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+          estimateElement.innerHTML = "Annual energy generation is: "+ Math.round(annualGeneration).toString() + " kWh";
       });
 
       efficiencyElement.addEventListener("change", function() {
           sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
           efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected);
-          estimateElement.innerHTML = "Annual energy generation is: "+ annualGeneration.toString();
+          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+          estimateElement.innerHTML = "Annual energy generation is: "+ Math.round(annualGeneration).toString() + " kWh";
       });
 
 
@@ -361,6 +389,28 @@
               vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
           );
       });
+      /**
+       * add an event handler to submit issue reports
+       */
+      $('#issueForm').submit(function (event) {
+
+        /* stop form from submitting normally */
+          event.preventDefault();
+
+        /* get the action attribution from the <form action=""> element */
+          var $form = $(this), url = $form.attr('action');
+
+        /* send the data using post with element id "issue"*/
+          var posting = $.post(url, {issue: $('#issue').val(), address: $('#popup-content').text()});
+
+          posting.done(function(data) {
+              alert('You issue report has been submitted. Thank you.');
+          });
+      });
+
+
+
+
     </script>
   </body>
 </html>
