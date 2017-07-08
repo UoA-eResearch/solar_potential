@@ -1,0 +1,2683 @@
+<Map srs="+init=epsg:3857" background-color="transparent">
+	<Style name="OrRd">
+		<Rule>
+			<RasterSymbolizer>
+				<RasterColorizer default-color="transparent" default-mode="discrete">
+					<stop color="#FFECB3" value="100"></stop>
+					<stop color="#FFE082" value="250"></stop>
+					<stop color="#FFD54F" value="400"></stop>
+					<stop color="#FFCA28" value="550"></stop>
+					<stop color="#FFC107" value="700"></stop>
+					<stop color="#FFB300" value="850"></stop>
+					<stop color="#FFA000" value="1000"></stop>
+					<stop color="#FF8F00" value="1150"></stop>
+					<stop color="#FF6F00" value="1300"></stop>
+				</RasterColorizer>
+			</RasterSymbolizer>
+		</Rule>
+	</Style>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AbbottsPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AbbottsPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Aberfeldy_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Aberfeldy_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Akarana_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Akarana_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Albany_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Albany_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Ambury_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Ambury_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Aorere_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Aorere_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Arahanga_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Arahanga_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ArchHill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ArchHill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ArmourBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ArmourBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ArmyBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ArmyBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AucklandCentralEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AucklandCentralEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AucklandCentralWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AucklandCentralWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AucklandHarbourside_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AucklandHarbourside_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AvondaleSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AvondaleSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1AvondaleWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1AvondaleWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Awaruku_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Awaruku_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Balmoral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Balmoral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Bayswater_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Bayswater_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BeachhavenNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BeachhavenNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BeachhavenSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BeachhavenSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BeachlandsMaraetai_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BeachlandsMaraetai_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Beaumont_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Beaumont_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Birdwood_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Birdwood_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BirkdaleNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BirkdaleNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BirkdaleSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BirkdaleSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BirkenheadEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BirkenheadEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Bleakhouse_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Bleakhouse_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BledisloePark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BledisloePark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BlockhouseBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BlockhouseBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Bombay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Bombay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BotanyDowns_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BotanyDowns_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Bremner_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Bremner_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BrownsBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BrownsBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BucklandsBeachSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BucklandsBeachSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1BucklandsandEasternBeaches_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1BucklandsandEasternBeaches_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Burbank_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Burbank_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Burswood_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Burswood_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CampbellsBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CampbellsBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CastorBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CastorBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Chelsea_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Chelsea_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ClendonNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ClendonNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ClendonSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ClendonSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CloverPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CloverPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CockleBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CockleBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CrownHill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CrownHill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1CrumPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1CrumPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1DairyFlatRedvale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1DairyFlatRedvale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Dannemora_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Dannemora_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Dingwall_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Dingwall_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1DonegalPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1DonegalPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1DurhamGreen_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1DurhamGreen_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EdenRoadHillTop_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EdenRoadHillTop_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EdenTerrace_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EdenTerrace_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Edgewater_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Edgewater_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Edmonton_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Edmonton_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EllerslieNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EllerslieNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EllerslieSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EllerslieSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ElsmorePark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ElsmorePark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EpsomCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EpsomCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EpsomNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EpsomNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EpsomSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EpsomSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Fairburn_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Fairburn_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Fairdene_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Fairdene_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Fairview_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Fairview_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1FavonaNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1FavonaNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1FavonaSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1FavonaSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1FavonaWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1FavonaWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Ferguson_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Ferguson_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Ferndale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Ferndale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1FlatBush_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1FlatBush_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ForrestHill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ForrestHill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1FreemansBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1FreemansBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Fruitvale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Fruitvale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Glamorgan_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Glamorgan_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenEdenEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenEdenEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenInnesEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenInnesEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenInnesNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenInnesNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenInnesWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenInnesWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Glenavon_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Glenavon_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlendeneNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlendeneNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlendeneSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlendeneSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Glendhu_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Glendhu_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Glendowie_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Glendowie_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenfieldCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenfieldCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GlenfieldNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GlenfieldNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Golfland_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Golfland_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GraftonEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GraftonEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GraftonWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GraftonWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Grange_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Grange_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GreenBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GreenBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Greenhithe_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Greenhithe_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GreyLynnEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GreyLynnEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GreyLynnWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GreyLynnWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1GulfHarbour_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1GulfHarbour_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HalfMoonBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HalfMoonBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hamlin_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hamlin_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HaraniaEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HaraniaEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HaraniaNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HaraniaNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HaraniaWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HaraniaWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HatfieldsBeach_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HatfieldsBeach_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hauraki_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hauraki_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HendersonNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HendersonNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HendersonSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HendersonSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HendersonWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HendersonWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Herald_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Herald_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HerneBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HerneBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hillpark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hillpark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HillsboroughEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HillsboroughEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HillsboroughWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HillsboroughWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hingaia_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hingaia_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hobsonville_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hobsonville_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HomaiEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HomaiEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HomaiWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HomaiWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HowickCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HowickCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1HowickWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1HowickWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Hyperion_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Hyperion_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kaipatiki_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kaipatiki_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1KauriPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1KauriPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kaurilands_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kaurilands_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kawau_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kawau_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1KelstonCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1KelstonCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kilkenny_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kilkenny_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kingdale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kingdale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kingsland_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kingsland_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1KohimaramaEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1KohimaramaEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1KohimaramaWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1KohimaramaWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Kohuora_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Kohuora_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Konini_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Konini_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Laingholm_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Laingholm_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1LakePupuke_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1LakePupuke_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Leabank_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Leabank_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1LongBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1LongBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1LuckenPoint_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1LuckenPoint_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1LynfieldNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1LynfieldNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1LynfieldSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1LynfieldSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Lynnmall_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Lynnmall_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MairangiBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MairangiBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereBridge_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MangereBridge_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MangereCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MangereEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereStation_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MangereStation_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Manly_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Manly_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ManurewaCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ManurewaCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ManurewaEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ManurewaEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Mascot_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Mascot_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MasseyPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MasseyPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MasseyWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MasseyWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Matipo_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Matipo_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Maungamaungaroa_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Maungamaungaroa_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Maungawhau_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Maungawhau_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1McLarenPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1McLarenPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Mcleod_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Mcleod_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MeadowbankNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MeadowbankNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MeadowbankSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MeadowbankSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MellonsBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MellonsBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Middlemore_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Middlemore_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Millhouse_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Millhouse_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MissionBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MissionBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MonarchPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MonarchPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtAlbertCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtAlbertCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtEdenEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtEdenEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtEdenNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtEdenNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtEdenSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtEdenSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtHobson_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtHobson_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtStJohn_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtStJohn_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtVictoria_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtVictoria_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtWellingtonNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtWellingtonNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MurraysBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MurraysBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Murvale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Murvale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NarrowNeck_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NarrowNeck_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NewLynnNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NewLynnNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NewLynnSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NewLynnSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NewWindsor_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NewWindsor_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Newmarket_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Newmarket_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Newton_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Newton_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NorthHarbourEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NorthHarbourEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NorthHarbourWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NorthHarbourWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1NorthcoteSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1NorthcoteSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Northcross_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Northcross_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Oaktree_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Oaktree_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OceanView_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OceanView_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OneTreeHillCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OneTreeHillCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OneTreeHillEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OneTreeHillEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OnehungaNorthEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OnehungaNorthEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OnehungaNorthWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OnehungaNorthWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OnehungaSouthEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OnehungaSouthEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OnehungaSouthWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OnehungaSouthWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Opaheke_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Opaheke_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Opanuku_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Opanuku_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OrakeiNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OrakeiNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OrakeiSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OrakeiSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Oranga_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Oranga_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Orewa_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Orewa_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Ormiston_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Ormiston_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtahuhuEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtahuhuEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtahuhuNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtahuhuNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtahuhuWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtahuhuWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtaraEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtaraEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtaraNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtaraNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtaraSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtaraSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OtaraWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OtaraWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Otimai_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Otimai_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OwairakaEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OwairakaEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1OwairakaWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1OwairakaWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PaerataCapeHill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PaerataCapeHill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Pahurehure_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Pahurehure_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PakurangaCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PakurangaCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PakurangaEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PakurangaEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PakurangaNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PakurangaNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PalmHeights_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PalmHeights_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PanmureBasin_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PanmureBasin_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapakuraCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapakuraCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapakuraEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapakuraEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapakuraNorthEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapakuraNorthEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapakuraNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapakuraNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapakuraSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapakuraSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapatoetoeCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapatoetoeCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapatoetoeEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapatoetoeEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapatoetoeNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapatoetoeNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PapatoetoeWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PapatoetoeWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ParemoremoEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParemoremoEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ParemoremoWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParemoremoWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ParnellEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParnellEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ParnellWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParnellWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ParrsPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParrsPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PigeonMountainNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PigeonMountainNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PigeonMountainSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PigeonMountainSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Pinehill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Pinehill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PointChevalierEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PointChevalierEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PointChevalierSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PointChevalierSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PointChevalierWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PointChevalierWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PointEngland_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PointEngland_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PointView_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PointView_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PonsonbyEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PonsonbyEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PonsonbyWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PonsonbyWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Puhinui_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Puhinui_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PukekoheNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PukekoheNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1PukekoheWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1PukekoheWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RandwickPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RandwickPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RanuiDomain_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RanuiDomain_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RanuiSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RanuiSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RedBeach_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RedBeach_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RedHill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RedHill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RedoubtNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RedoubtNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RedoubtSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RedoubtSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RemueraSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RemueraSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RemueraWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RemueraWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Rewarewa_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Rewarewa_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Roberton_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Roberton_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Rosebank_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Rosebank_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Rosehill_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Rosehill_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RothesayBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RothesayBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Rowandale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Rowandale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RoyalHeights_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RoyalHeights_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RoyalOak_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RoyalOak_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1RoyalRoadWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1RoyalRoadWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Runciman_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Runciman_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SandringhamEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SandringhamEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SandringhamNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SandringhamNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SandringhamWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SandringhamWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Seacliffe_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Seacliffe_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ShellyPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ShellyPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Sherbourne_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Sherbourne_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SilverdaleNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SilverdaleNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SilverdaleSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SilverdaleSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Springleigh_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Springleigh_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StHeliers_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StHeliers_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StJohns_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StJohns_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StLukesNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StLukesNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StLukes_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StLukes_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StMarys_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StMarys_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StanleyBay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StanleyBay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StanmoreBayEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StanmoreBayEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StanmoreBayWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StanmoreBayWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1StarlingPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1StarlingPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SturgesNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SturgesNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Sunnybrae_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Sunnybrae_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Sunnyhills_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Sunnyhills_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Sunnynook_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Sunnynook_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Sunnyvale_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Sunnyvale_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1SurreyCrescent_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1SurreyCrescent_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Swanson_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Swanson_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TakaniniNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TakaniniNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TakaniniSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TakaniniSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TakaniniWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TakaniniWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TakapunaCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TakapunaCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Tamaki_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Tamaki_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Tangutu_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Tangutu_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TargetRoad_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TargetRoad_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Taupaki_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Taupaki_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TeAtatuCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TeAtatuCentral_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TePapapa_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TePapapa_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ThreeKings_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ThreeKings_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TitirangiSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TitirangiSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Torbay_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Torbay_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TotaraHeights_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TotaraHeights_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1TuffCrater_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1TuffCrater_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Turanga_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Turanga_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1UnsworthHeights_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1UnsworthHeights_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Urlich_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Urlich_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Vipond_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Vipond_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Viscount_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Viscount_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WadeHeads_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WadeHeads_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waiake_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waiake_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waiata_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waiata_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WaikowhaiEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WaikowhaiEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WaikowhaiWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WaikowhaiWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waima_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waima_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WaimumuNorth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WaimumuNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WaimumuSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WaimumuSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WaipareiraWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WaipareiraWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Wairere_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Wairere_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waitakere_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waitakere_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waitaramoa_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waitaramoa_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waiwera_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waiwera_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Wakeling_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Wakeling_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Walmsley_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Walmsley_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Warkworth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Warkworth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Waterview_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Waterview_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WattleFarm_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WattleFarm_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Wesley_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Wesley_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WestHarbour_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WestHarbour_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Westgate_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Westgate_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Westlake_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Westlake_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Westmere_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Westmere_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WeymouthEast_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WeymouthEast_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WeymouthWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WeymouthWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WhenuapaiWest_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WhenuapaiWest_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WindsorPark_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WindsorPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1WindyRidge_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1WindyRidge_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Wiri_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Wiri_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Witheford_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Witheford_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Woodglen_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Woodglen_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+</Map>

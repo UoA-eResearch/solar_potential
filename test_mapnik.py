@@ -2,6 +2,6 @@
 import mapnik
 
 m = mapnik.Map(4000,4000)
-mapnik.load_map(m, "style.xml")
+mapnik.load_map(m, "style_circles.xml")
 m.zoom_all()
 mapnik.render_to_file(m, "all.png")
