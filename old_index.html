@@ -9,15 +9,8 @@
         width: 100%;
         background-color: #a3ccff;
       }
-      a:visited {
-        color: white;
-      }
       .ol-control button{
         background-color: rgba(40, 40, 40, 0.85) !important;
-      }
-      .ol-scale-line {
-        background: black;
-        padding: 5px;
       }
       #legend {
         position: absolute;
@@ -78,26 +71,6 @@
       .ol-popup-closer:after {
         content: "✖";
       }
-      .info-window {
-        width: 400px;
-        height: 500px;
-        position: absolute;
-        top: 300px;
-        left: 1000px;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        color: #FFCA28;
-        font-family: Arial;
-      }
-      .layer-switch {
-        position: absolute;
-        left: 10px;
-        top: 42px;
-        background-color: white;
-
-      }
-
     </style>
     <script src="https://unpkg.com/openlayers@4.0.1" type="text/javascript"></script>
     <link rel="stylesheet" href="https://unpkg.com/openlayers@4.0.1/dist/ol.css" type="text/css">
@@ -111,60 +84,20 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <title>Solar Potential Map</title>
   </head>
-
   <body>
 
-  <div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspAuckland Rooftop Solar Energy Potential</div>
+  <div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspSolar Energy Potential</div>
     <div id="map" class="map"></div>
-    <div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²/year): </span></div>
+    <div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²): </span></div>
     <div id="info"></div>
-    <div class="layer-switch" id="layer-switcher"><div>
-  <!--<div id="popup" class="ol-popup">
-    <!--<a href="#" id="popup-closer" class="ol-popup-closer"></a>
-    <div id="popup-content" name="popup-content"></div>
-    <p><b>Annual average solar radiation on surface:</b></p>
-    <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
-    <br>
-    <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
-    <p><b>Please select solar panel specifications:</b></p>
-    <div id="popup-equipment">
-      Installation size (m²):
-      <select id="Installation-Size">
-        <option value="60">20 m² standard 3 kW system</option>
-        <option value="175">35 m² standard 5 kW system</option>
-        <option value="350">50 m²standard 7 kW system</option>
-      </select>
-      <br>
-      Efficiency:
-      <select id="Efficiency">
-        <option value="15">Standard PV (15%)</option>
-        <option value="19">Premium PV (19%)</option>
-        <option value="10">Thin film PV (10%)</option>
-      </select>
-      <div id="popup-estimate"></div>
-    </div>
-    <br>
-    <div id="report-error">
-      <form id="issueForm" method="post" action="errorReport.php">
-        <b>Report an issue:</b><br>
-        <input type="text" id="issue" name="issue">
-        <br>
-        <input type="submit" value="Submit" id="submitButton">
-      </form>
-    </div>
-    <div id="readme" style="text-align:right">
-      <a href="resources/readme.pdf" style="color:#f1c40f" target="_blank"><p style="text-align:right">Read me</p></a>
-    </div>
-    </div>-->
-
-
-    <div class="info-window">
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
       <div id="popup-content" name="popup-content"></div>
-      <p><b>Annual average solar radiation on surface:</b></p>
+      <p><b>Annual Solar Energy Potential (kWh/m²):</b></p>
       <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
       <br>
       <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
-      <p><b>Please select solar panel specifications:</b></p>
+      <p><b>Please select solar panel type:</b></p>
       <div id="popup-equipment">
         Installation size (m²):
         <select id="Installation-Size">
@@ -180,20 +113,15 @@
           <option value="10">Thin film PV (10%)</option>
         </select>
         <div id="popup-estimate"></div>
-
       </div>
       <br>
       <div id="report-error">
-        <form id="info-issueForm" method="post" action="errorReport.php">
+        <form id="issueForm" method="post" action="errorReport.php">
           <b>Report an issue:</b><br>
           <input type="text" id="issue" name="issue">
           <br>
           <input type="submit" value="Submit" id="submitButton">
         </form>
-      </div>
-
-      <div id="readme">
-        <a href="resources/readme.pdf" style="color:#f1c40f" target="_blank"><p style="text-align:right">Read me</p></a>
       </div>
     </div>
 
@@ -208,9 +136,9 @@
       /**
        * Elements that make up the popup.
        */
-      /*var container = document.getElementById('popup');*/
+      var container = document.getElementById('popup');
       var content = document.getElementById('popup-content');
-      /*var closer = document.getElementById('popup-closer');*/
+      var closer = document.getElementById('popup-closer');
       var sizeElement = document.getElementById("Installation-Size");
       var efficiencyElement = document.getElementById("Efficiency");
       var estimateElement = document.getElementById('popup-estimate');
@@ -230,25 +158,24 @@
       /**
        * Create an overlay to anchor the popup to the map.
        */
-
-      /**var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ /*({
-        /**element: container,
+      var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ ({
+        element: container,
         autoPan: true,
         autoPanAnimation: {
           duration: 250
         }
-      }));*/
+      }));
 
 
       /**
        * Add a click handler to hide the popup.
        * @return {boolean} Don't follow the href.
        */
-      /**closer.onclick = function() {
+      closer.onclick = function() {
         overlay.setPosition(undefined);
         closer.blur();
         return false;
-      };*/
+      };
 
 
       /**
@@ -316,7 +243,7 @@
           new ol.control.ZoomSlider(),
           layerswitcher
         ]),
-        /*overlays: [overlay],*/
+        overlays: [overlay],
         target: 'map',
         interactions: ol.interaction.defaults().extend([
           dragAndDropInteraction
@@ -365,7 +292,7 @@
         provider: 'osm',
         key: '__some_key__',
         lang: 'en', //en-US, fr-FR
-        placeholder: 'Search for or click on building for more information',
+        placeholder: 'Search for ...',
         targetType: 'text-input',
         limit: 5,
         keepOpen: false,
@@ -404,22 +331,24 @@
                       "Sum: " + (parseInt(r.sum)).toString() + "kWh",
                   ];*/
                   var addressInfo = ["<i>" + r.address.replace(/_/g, ', ') + "</i>", r.up_env];
-                  var solarInfo = ["Top 14 m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
-                      "Top 20 m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + " kWh/m²",
-                  "Top 28 m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + " kWh/m²",
-                  "Top 36 m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + " kWh/m²"];
+                  var solarInfo = ["Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
+                      "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + " kWh/m²",
+                  "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + " kWh/m²",
+                  "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + " kWh/m²",
+                  "&nbsp&nbsp"+"Average: " + (parseInt(r.mean)).toString() + " kWh/m²"];
                   var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
                   addressInfoElement.innerHTML = addressInfo.join("<br>");
                   solarInfoElement.innerHTML = solarInfo.join("<br>");
-                  solarInfoTotalElement.innerHTML = "<b>" + "Total annual solar radiation on roof：" + "</b><br /><br />&nbsp"+ solarInfoTotal;
+                  solarInfoTotalElement.innerHTML = "<b>" + "Annual Total:" + "</b>&nbsp"+ solarInfoTotal;
                   sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
                   efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+
                   var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
                   console.log(annualGeneration);
-                  estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
+                  estimateElement.innerHTML = "Annual energy generation is: " + Math.round(annualGeneration).toString() + " kWh";
                   overlay.setPosition(coordinate);
               } else {
-                  console.log('No available info')
+                  console.log('No available infor')
               }
           });
       });
@@ -432,14 +361,14 @@
           sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
           efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
           var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
-          estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+          estimateElement.innerHTML = "Annual energy generation is: "+ Math.round(annualGeneration).toString() + " kWh";
       });
 
       efficiencyElement.addEventListener("change", function() {
           sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
           efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
           var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
-          estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+          estimateElement.innerHTML = "Annual energy generation is: "+ Math.round(annualGeneration).toString() + " kWh";
       });
 
 
@@ -478,6 +407,9 @@
               alert('You issue report has been submitted. Thank you.');
           });
       });
+
+
+
 
     </script>
   </body>
