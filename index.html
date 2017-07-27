@@ -1,484 +1,535 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <style>
-      html, body, .map {
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #a3ccff;
-      }
-      a:visited {
-        color: white;
-      }
-      .ol-control button{
-        background-color: rgba(40, 40, 40, 0.85) !important;
-      }
-      .ol-scale-line {
-        background: black;
-        padding: 5px;
-      }
-      #legend {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: black;
-        padding: 5px;
-        width: 500px;
-        text-align: right;
-      }
-      .colorbox {
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        margin-right: 5px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <style>
+    html, body, .map {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #a3ccff;
+    }
+    a:visited {
+      color: white;
+    }
+    .ol-control button{
+      background-color: rgba(40, 40, 40, 0.85) !important;
+    }
+    .ol-scale-line {
+      background: black;
+      padding: 5px;
+    }
+    #legend {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: black;
+      padding: 5px;
+      width: 500px;
+      text-align: right;
+    }
+    .colorbox {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-right: 5px;
+    }
 
-      .ol-popup {
-        position: absolute;
-        background-color: white;
-        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #cccccc;
-        bottom: 12px;
-        left: -50px;
-        min-width: 350px;
-        min-height: 450px;
-      }
-      .ol-popup:after, .ol-popup:before {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-      }
-      .ol-popup:after {
-        border-top-color: white;
-        border-width: 10px;
-        left: 48px;
-        margin-left: -10px;
-      }
-      .ol-popup:before {
-        border-top-color: #cccccc;
-        border-width: 11px;
-        left: 48px;
-        margin-left: -11px;
-      }
-      .ol-popup-closer {
-        text-decoration: none;
-        position: absolute;
-        top: 2px;
-        right: 8px;
-      }
-      .ol-popup-closer:after {
-        content: "✖";
-      }
-      .info-window {
-        width: 400px;
-        height: 500px;
-        position: absolute;
-        top: 300px;
-        left: 1000px;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        color: #FFCA28;
-        font-family: Arial;
-      }
-      .layer-switch {
-        position: absolute;
-        left: 10px;
-        top: 42px;
-        background-color: white;
+    .ol-popup {
+      position: absolute;
+      background-color: white;
+      -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+      filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #cccccc;
+      bottom: 12px;
+      left: -50px;
+      min-width: 350px;
+      min-height: 450px;
+    }
+    .ol-popup:after, .ol-popup:before {
+      top: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .ol-popup:after {
+      border-top-color: white;
+      border-width: 10px;
+      left: 48px;
+      margin-left: -10px;
+    }
+    .ol-popup:before {
+      border-top-color: #cccccc;
+      border-width: 11px;
+      left: 48px;
+      margin-left: -11px;
+    }
+    .ol-popup-closer {
+      text-decoration: none;
+      position: absolute;
+      top: 2px;
+      right: 8px;
+    }
+    .ol-popup-closer:after {
+      content: "✖";
+    }
+    .info-window {
+      width: 400px;
+      height: 640px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      color: #E9D460;
+      /*<!--#FFCA28-->;*/
+      font-family: Arial;
+    }
 
-      }
+    .layer-switcher {
+      position: fixed !important;
+      top: 6% !important;
+      right: 3% !important;
+    }
 
-    </style>
-    <script src="https://unpkg.com/openlayers@4.0.1" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://unpkg.com/openlayers@4.0.1/dist/ol.css" type="text/css">
-    <!--<script src="https://openlayers.org/en/v4.1.1/build/ol.js" type="text/javascript"></script>-->
-    <!--<link rel="stylesheet" href="https://openlayers.org/en/v4.1.1/css/ol.css" type="text/css">-->
-    <script src="//cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="//cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.css" type="text/css">
-    <script src="https://unpkg.com/ol3-geocoder@2.5.0"></script>
-    <link href="https://unpkg.com/ol3-geocoder@2.5.0/build/ol3-geocoder.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <title>Solar Potential Map</title>
-  </head>
 
-  <body>
+  </style>
+  <script src="https://unpkg.com/openlayers@4.0.1" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://unpkg.com/openlayers@4.0.1/dist/ol.css" type="text/css">
+  <!--<script src="https://openlayers.org/en/v4.1.1/build/ol.js" type="text/javascript"></script>-->
+  <!--<link rel="stylesheet" href="https://openlayers.org/en/v4.1.1/css/ol.css" type="text/css">-->
+  <script src="//cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="//cdn.rawgit.com/walkermatt/ol3-layerswitcher/master/src/ol3-layerswitcher.css" type="text/css">
+  <script src="https://unpkg.com/ol3-geocoder@2.5.0"></script>
+  <link href="https://unpkg.com/ol3-geocoder@2.5.0/build/ol3-geocoder.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <title>Solar Potential Map</title>
+</head>
 
-  <div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspAuckland Rooftop Solar Energy Potential</div>
-    <div id="map" class="map"></div>
-    <div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²/year): </span></div>
-    <div id="info"></div>
-    <div class="layer-switch" id="layer-switcher"><div>
-  <!--<div id="popup" class="ol-popup">
-    <!--<a href="#" id="popup-closer" class="ol-popup-closer"></a>
-    <div id="popup-content" name="popup-content"></div>
-    <p><b>Annual average solar radiation on surface:</b></p>
-    <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
+<body>
+
+<div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspAuckland Rooftop Solar Energy Potential</div>
+<div id="map" class="map"></div>
+<div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²/year): </span></div>
+<div id="info"></div>
+<div class="layer-switch" id="layer-switcher"></div>
+<!--<div id="popup" class="ol-popup">
+  <!--<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+  <div id="popup-content" name="popup-content"></div>
+  <p><b>Annual average solar radiation on surface:</b></p>
+  <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
+  <br>
+  <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
+  <p><b>Please select solar panel specifications:</b></p>
+  <div id="popup-equipment">
+    Installation size (m²):
+    <select id="Installation-Size">
+      <option value="60">20 m² standard 3 kW system</option>
+      <option value="175">35 m² standard 5 kW system</option>
+      <option value="350">50 m²standard 7 kW system</option>
+    </select>
     <br>
-    <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
-    <p><b>Please select solar panel specifications:</b></p>
-    <div id="popup-equipment">
-      Installation size (m²):
-      <select id="Installation-Size">
-        <option value="60">20 m² standard 3 kW system</option>
-        <option value="175">35 m² standard 5 kW system</option>
-        <option value="350">50 m²standard 7 kW system</option>
-      </select>
+    Efficiency:
+    <select id="Efficiency">
+      <option value="15">Standard PV (15%)</option>
+      <option value="19">Premium PV (19%)</option>
+      <option value="10">Thin film PV (10%)</option>
+    </select>
+    <div id="popup-estimate"></div>
+  </div>
+  <br>
+  <div id="report-error">
+    <form id="issueForm" method="post" action="errorReport.php">
+      <b>Report an issue:</b><br>
+      <input type="text" id="issue" name="issue">
       <br>
-      Efficiency:
-      <select id="Efficiency">
-        <option value="15">Standard PV (15%)</option>
-        <option value="19">Premium PV (19%)</option>
-        <option value="10">Thin film PV (10%)</option>
-      </select>
-      <div id="popup-estimate"></div>
-    </div>
+      <input type="submit" value="Submit" id="submitButton">
+    </form>
+  </div>
+  <div id="readme" style="text-align:right">
+    <a href="resources/readme.pdf" style="color:#f1c40f" target="_blank"><p style="text-align:right">Read me</p></a>
+  </div>
+  </div>-->
+<div class="info-window">
+  <div id="popup-content" name="popup-content">Click on building for more information</div>
+  <p><b>Annual average solar radiation on surface:</b></p>
+  <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
+  <br>
+  <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
+  <p><b>Please select solar panel specifications:</b></p>
+  <div id="popup-equipment">
+    <span style="display:inline-block; width: 15px;"></span>Installation size (m²):
+    <select id="Installation-Size">
+      <option value="28">14 m² standard 2 kW system</option>
+      <option value="60">20 m² standard 3 kW system</option>
+      <option value="84">28 m² standard 3 kW system</option>
+      <option value="180">36 m² standard 5 kW system</option>
+      <option value="350">50 m² standard 7 kW system</option>
+    </select>
     <br>
-    <div id="report-error">
-      <form id="issueForm" method="post" action="errorReport.php">
-        <b>Report an issue:</b><br>
-        <input type="text" id="issue" name="issue">
-        <br>
-        <input type="submit" value="Submit" id="submitButton">
-      </form>
-    </div>
-    <div id="readme" style="text-align:right">
-      <a href="resources/readme.pdf" style="color:#f1c40f" target="_blank"><p style="text-align:right">Read me</p></a>
-    </div>
-    </div>-->
+    <span style="display:inline-block; width: 34px;"></span>Default Efficiency:
+    <select id="Efficiency">
+      <option value="15">15% with standard PV</option>
+      <option value="19">19% with premium PV</option>
+      <option value="10">10% with thin film PV</option>
+    </select>
+    <form name="TESTING" onSubmit="return false;"><span style="display:inline-block; width: 0px;"></span>Customised Efficiency:
+      <input type="number" name="INPUT1" id="input" style="width: 40px" onchange="calculate()">%
+    </form>
+    <input type='hidden' id="total-annual-radiation" value="0">
 
+    <div id="popup-estimate"></div>
 
-    <div class="info-window">
-      <div id="popup-content" name="popup-content"></div>
-      <p><b>Annual average solar radiation on surface:</b></p>
-      <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
+  </div>
+  <br>
+  <span style="display:inline-block; width: 0px;"></span><b>Net present value (NPV) estimation:</b>
+  <div id="popup-NPV" name="popup-NPV">
+    <form name="formNPV" onSubmit="return false;">
+      <span style="display:inline-block; width: 20px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="50" style="width: 40px" onchange="calculateNPV()"> % <br />
+      <span style="display:inline-block; width: 109px;"></span>Sell price: <input type="number" name="sellprice" id="input3" value="25" style="width: 40px" onchange="calculateNPV()"> cents/kWh<br />
+      <span style="display:inline-block; width: 69px;"></span>Pay-back price: <input type="number" name="paybackrate" id="input4" value="8" style="width: 40px" onchange="calculateNPV()"> cents/kWh<br />
+
+    </form>
+    <div id="popup-NPVestimate"></div>
+
+  </div>
+
+  <br>
+  <div id="report-error">
+    <form id="issueForm" method="post" action="errorReport.php">
+      <b>Report an issue:</b><br>
+      <input type="text" id="issue" name="issue">
       <br>
-      <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
-      <p><b>Please select solar panel specifications:</b></p>
-      <div id="popup-equipment">
-        Installation size (m²):
-        <select id="Installation-Size">
-          <option value="60">20 m² standard 3 kW system</option>
-          <option value="175">35 m² standard 5 kW system</option>
-          <option value="350">50 m²standard 7 kW system</option>
-        </select>
-        <br>
-        Efficiency:
-        <select id="Efficiency">
-          <option value="15">Standard PV (15%)</option>
-          <option value="19">Premium PV (19%)</option>
-          <option value="10">Thin film PV (10%)</option>
-        </select>
-        <div id="popup-estimate"></div>
+      <input type="submit" value="Submit" id="submitButton">
+    </form>
+  </div>
 
-      </div>
-      <br>
-      <div id="report-error">
-        <form id="info-issueForm" method="post" action="errorReport.php">
-          <b>Report an issue:</b><br>
-          <input type="text" id="issue" name="issue">
-          <br>
-          <input type="submit" value="Submit" id="submitButton">
-        </form>
-      </div>
+  <div id="readme">
+    <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Read me</p></a>
+  </div>
+</div>
 
-      <div id="readme">
-        <a href="resources/readme.pdf" style="color:#f1c40f" target="_blank"><p style="text-align:right">Read me</p></a>
-      </div>
-    </div>
+<script type="text/javascript">
 
-    <script type="text/javascript">
-
-      /**
-       * Global variables for map controls
-       */
-      var extent = [19339108.58970958, -4504204.6540832445, 19585408.110816702, -4335432.371497248];
+    /**
+     * Global variables for map controls
+     */
+    var extent = [19339108.58970958, -4504204.6540832445, 19585408.110816702, -4335432.371497248];
 
 
-      /**
-       * Elements that make up the popup.
-       */
-      /*var container = document.getElementById('popup');*/
-      var content = document.getElementById('popup-content');
-      /*var closer = document.getElementById('popup-closer');*/
-      var sizeElement = document.getElementById("Installation-Size");
-      var efficiencyElement = document.getElementById("Efficiency");
-      var estimateElement = document.getElementById('popup-estimate');
-      var layerswitcher = new ol.control.LayerSwitcher();
-      var dragAndDropInteraction = new ol.interaction.DragAndDrop({
-          formatConstructors: [
-              ol.format.GPX,
-              ol.format.GeoJSON,
-              ol.format.IGC,
-              ol.format.KML,
-              ol.format.TopoJSON
-          ]
-      });
+    /**
+     * Elements that make up the popup.
+     */
+    /*var container = document.getElementById('popup');*/
+    var content = document.getElementById('popup-content');
+    /*var closer = document.getElementById('popup-closer');*/
+    var sizeElement = document.getElementById("Installation-Size");
+    var efficiencyElement = document.getElementById("Efficiency");
+    var estimateElement = document.getElementById('popup-estimate');
+    var annualRadiation = document.getElementById('total-annual-radiation');
+    var npvEstimate = document.getElementById('popup-NPVestimate');
+    var layerswitcher = new ol.control.LayerSwitcher();
+    var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+        formatConstructors: [
+            ol.format.GPX,
+            ol.format.GeoJSON,
+            ol.format.IGC,
+            ol.format.KML,
+            ol.format.TopoJSON
+        ]
+    });
 
 
 
-      /**
-       * Create an overlay to anchor the popup to the map.
-       */
+    /**
+     * Create an overlay to anchor the popup to the map.
+     */
 
-      /**var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ /*({
-        /**element: container,
-        autoPan: true,
-        autoPanAnimation: {
-          duration: 250
-        }
-      }));*/
+    /**var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ /*({
+     /**element: container,
+     autoPan: true,
+     autoPanAnimation: {
+     duration: 250
+     }
+     }));*/
 
 
-      /**
-       * Add a click handler to hide the popup.
-       * @return {boolean} Don't follow the href.
-       */
-      /**closer.onclick = function() {
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    /**closer.onclick = function() {
         overlay.setPosition(undefined);
         closer.blur();
         return false;
       };*/
 
 
-      /**
-       * Set up the legend bar
-       */
-      var scheme = "OrRd";
-      var scale = 150;
-      /*var colors = {
-        'OrRd': ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000'],
-      }*/
-      var colors = {
-          'OrRd': ['#FFECB3','#FFE082','#FFD54F','#FFCA28','#FFC107','#FFB300','#FFA000','#FF8F00','#FF6F00'],
-      };
+    /**
+     * Set up the legend bar
+     */
+    var scheme = "OrRd";
+    var scale = 150;
+    /*var colors = {
+     'OrRd': ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000'],
+     }*/
+    var colors = {
+        'OrRd': ['#FFECB3','#FFE082','#FFD54F','#FFCA28','#FFC107','#FFB300','#FFA000','#FF8F00','#FF6F00'],
+    };
 
-      for (var i = 0; i < colors[scheme].length; i++) {
+    for (var i = 0; i < colors[scheme].length; i++) {
         var start = i * scale + 100;
         var end = (i + 1) * scale + 100;
         var rangeStr = start + "-" + end;
         if (i + 1 == colors[scheme].length) {
-          rangeStr = start + "+";
+            rangeStr = start + "+";
         }
         $("#legend").append("<font face='Arial' color='white'>" + rangeStr + "</font>" + ":<span class='colorbox' style='background-color:" + colors[scheme][i] + "'></span>&nbsp&nbsp");
-      };
+    };
 
 
-      /**
-       * Add default layers from different sources
-       */
-      var overlayGroup = new ol.layer.Group({
+    /**
+     * Add default layers from different sources
+     */
+    var overlayGroup = new ol.layer.Group({
         'title': 'Overlays',
         zIndex: 10,
         layers: [
-          new ol.layer.Tile({
-            title: 'Solar potential',
-            source: new ol.source.XYZ({
-              url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential/{z}/{x}/{y}.png'
+            new ol.layer.Tile({
+                title: 'Solar potential',
+                source: new ol.source.XYZ({
+                    url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential/{z}/{x}/{y}.png'
+                }),
+                extent: extent,
+                visible: false
             }),
-            extent: extent,
-            visible: false
-          }),
-          new ol.layer.Tile({
-            title: 'Solar potential (circles)',
-            source: new ol.source.XYZ({
-              url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
+            new ol.layer.Tile({
+                title: 'Solar potential (circles)',
+                source: new ol.source.XYZ({
+                    url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
+                }),
+                extent: extent
             }),
-            extent: extent
-          }),
-          new ol.layer.Tile({
-            title: 'City labels',
-            source: new ol.source.Stamen({
-              layer: 'toner-labels',
-            }),
-            opacity: .5
-          })
+            new ol.layer.Tile({
+                title: 'City labels',
+                source: new ol.source.Stamen({
+                    layer: 'toner-labels',
+                }),
+                opacity: .5
+            })
         ]
-      });
+    });
 
 
-      /**
-       * Set up the map's layout, including layers, controls and view
-       */
-      var map = new ol.Map({
+    /**
+     * Set up the map's layout, including layers, controls and view
+     */
+    var map = new ol.Map({
         controls: ol.control.defaults().extend([
-          new ol.control.ScaleLine(),
-          new ol.control.ZoomSlider(),
-          layerswitcher
+            new ol.control.ScaleLine(),
+            new ol.control.ZoomSlider(),
+            layerswitcher
         ]),
-        /*overlays: [overlay],*/
+      /*overlays: [overlay],*/
         target: 'map',
         interactions: ol.interaction.defaults().extend([
-          dragAndDropInteraction
+            dragAndDropInteraction
         ]),
         layers: [
           /*new ol.layer.Group({
-            'title': 'Base maps',
-            layers: [
-              new ol.layer.Tile({
-                title: 'Terrain',
-                source: new ol.source.Stamen({
-                  layer: 'terrain-background'
-                })
-              }),
-              new ol.layer.Tile({
-                title: 'Roads',
-                source: new ol.source.Stamen({
-                  layer: 'terrain-lines'
-                })
-              })
-            ]
-          }),*/
-          new ol.layer.Tile({
-              'title': 'Base Map',
+           'title': 'Base maps',
+           layers: [
+           new ol.layer.Tile({
+           title: 'Terrain',
+           source: new ol.source.Stamen({
+           layer: 'terrain-background'
+           })
+           }),
+           new ol.layer.Tile({
+           title: 'Roads',
+           source: new ol.source.Stamen({
+           layer: 'terrain-lines'
+           })
+           })
+           ]
+           }),*/
+            new ol.layer.Tile({
+                'title': 'Base Map',
                 source: new ol.source.TileArcGISRest({
                     url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
 
                 })
             }),
-          overlayGroup
+            overlayGroup
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([174.766462, -36.891249]),
-          zoom: 12,
-          minZoom: 11,
-          maxZoom: 20,
-          extent: extent
+            center: ol.proj.fromLonLat([174.766462, -36.891249]),
+            zoom: 12,
+            minZoom: 11,
+            maxZoom: 20,
+            extent: extent
         }),
-      });
+    });
 
 
-      /**
-       * add a geocoder to map
-       */
-      var geocoder = new Geocoder('nominatim', {
+    /**
+     * add a geocoder to map
+     */
+    var geocoder = new Geocoder('nominatim', {
         provider: 'osm',
         key: '__some_key__',
         lang: 'en', //en-US, fr-FR
-        placeholder: 'Search for or click on building for more information',
+        placeholder: 'Search for ',
         targetType: 'text-input',
         limit: 5,
         keepOpen: false,
         autoComplete: true,
         countrycodes: "NZ",
         preventDefault: false
-      });
-      map.addControl(geocoder);
+    });
+    map.addControl(geocoder);
 
 
-      /**
-       * Add a click handler to the map to render the popup.
-       */
-      map.on('singleclick', function(evt) {
-          var coordinate = evt.coordinate;
-          var issueFormElement = document.getElementById('issue');
-          issueFormElement.value = '';
-          $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
-              if (data.results.length >= 1) {
-                  var r = data.results[0];
-                  console.log(r);
-                  /*var infoElement = document.getElementById('popup-content');*/
-                  var estimateElement = document.getElementById('popup-estimate');
+    /**
+     * Add a click handler to the map to render the popup.
+     */
+    map.on('singleclick', function(evt) {
+        var coordinate = evt.coordinate;
+        var issueFormElement = document.getElementById('issue');
+        issueFormElement.value = '';
+        $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
+            if (data.results.length >= 1) {
+                var r = data.results[0];
+                console.log(r);
+              /*var infoElement = document.getElementById('popup-content');*/
+                var estimateElement = document.getElementById('popup-estimate');
 
-                  var addressInfoElement = document.getElementById('popup-content');
-                  var solarInfoElement = document.getElementById('popup-solarenergyinfo');
-                  var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total')
-                  if (r.address == '_ _') r.address = "Address unknown";
-                  /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
-                      r.up_env,
-                      "Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + "kWh/m²",
-                      "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + "kWh/m²",
-                      "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + "kWh/m²",
-                      "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + "kWh/m²",
-                      "Mean: " + (parseInt(r.mean)).toString() + "kWh/m²",
-                      "Sum: " + (parseInt(r.sum)).toString() + "kWh",
-                  ];*/
-                  var addressInfo = ["<i>" + r.address.replace(/_/g, ', ') + "</i>", r.up_env];
-                  var solarInfo = ["Top 14 m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
-                      "Top 20 m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + " kWh/m²",
-                  "Top 28 m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + " kWh/m²",
-                  "Top 36 m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + " kWh/m²"];
-                  var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
-                  addressInfoElement.innerHTML = addressInfo.join("<br>");
-                  solarInfoElement.innerHTML = solarInfo.join("<br>");
-                  solarInfoTotalElement.innerHTML = "<b>" + "Total annual solar radiation on roof：" + "</b><br /><br />&nbsp"+ solarInfoTotal;
-                  sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
-                  efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-                  var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
-                  console.log(annualGeneration);
-                  estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
-                  overlay.setPosition(coordinate);
-              } else {
-                  console.log('No available info')
-              }
-          });
-      });
+                var addressInfoElement = document.getElementById('popup-content');
+                var solarInfoElement = document.getElementById('popup-solarenergyinfo');
+                var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total')
+                if (r.address == '_ _') r.address = "Address unknown";
+              /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
+               r.up_env,
+               "Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + "kWh/m²",
+               "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + "kWh/m²",
+               "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + "kWh/m²",
+               "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + "kWh/m²",
+               "Mean: " + (parseInt(r.mean)).toString() + "kWh/m²",
+               "Sum: " + (parseInt(r.sum)).toString() + "kWh",
+               ];*/
+                var addressInfo = ["<i>" + r.address.replace(/_/g, ', ') + "</i>", r.up_env];
+                var solarInfo = ["Top 14 m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
+                    "Top 20 m²: " + (Math.round(parseInt(r.top20) / 20)).toString() + " kWh/m²",
+                    "Top 28 m²: " + (Math.round(parseInt(r.top28) / 28)).toString() + " kWh/m²",
+                    "Top 36 m²: " + (Math.round(parseInt(r.top36) / 36)).toString() + " kWh/m²"];
+                var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
 
-      /**
-       * add event handlers to the select buttons to calculate and display annual electricity generation
-       * according to different equipment size and efficiency
-       */
-      sizeElement.addEventListener("change", function() {
-          sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
-          efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
-          estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
-      });
+                addressInfoElement.innerHTML = addressInfo.join("<br>");
+                solarInfoElement.innerHTML = solarInfo.join("<br>");
+                solarInfoTotalElement.innerHTML = "<b>" + "Total annual solar radiation on roof：" + "</b><br /><br />&nbsp<span style='font-size: 40px'><b>"+ solarInfoTotal + "</b></span>";
+                sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+                efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+                var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+                annualRadiation.value = annualGeneration;
+                console.log(annualRadiation.value);
+                estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
+                var selfConsumption = document.formNPV.selfconsumption.value;
+                var sellPrice = document.formNPV.sellprice.value;
+                var paybackRate = document.formNPV.paybackrate.value;
+                var RESULT = (0.01 * annualRadiation.value * selfConsumption * sellPrice + (1.0 - 0.01 * selfConsumption) * annualRadiation.value * paybackRate)/100.0;
+                npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual NPV is: <span style='font-size:20px'>" + Math.round(RESULT).toString() + "</span> NZD";
+                //overlay.setPosition(coordinate);
+            } else {
+                console.log('No available info')
+            }
+        });
+    });
 
-      efficiencyElement.addEventListener("change", function() {
-          sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
-          efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-          var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
-          estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
-      });
+    /**
+     * add event handlers to the select buttons to calculate and display annual electricity generation
+     * according to different equipment size and efficiency
+     */
+    sizeElement.addEventListener("change", function() {
+        sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+        efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+        var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+        annualRadiation.value = annualGeneration;
+        estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+    });
+
+    efficiencyElement.addEventListener("change", function() {
+        sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+        efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+        var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+        annualRadiation.value = annualGeneration;
+        estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+    });
+
+    /**
+     * calculate annual generation based on input efficiency
+     */
+    function calculate() {
+        var efficiencyVal = document.TESTING.INPUT1.value,
+            installationSize = sizeElement.options[sizeElement.selectedIndex].value;
+        RESULT = efficiencyVal * installationSize* 3.65;
+        annualRadiation.value = RESULT;
+        //document.TESTING.OUTPUT1.value = RESULT;
+        estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
+    };
+
+    function calculateNPV() {
+        var selfConsumption = document.formNPV.selfconsumption.value;
+        var sellPrice = document.formNPV.sellprice.value;
+        var paybackRate = document.formNPV.paybackrate.value;
+        var annualRadiation = document.getElementById('total-annual-radiation').value;
+        var RESULT = (annualRadiation * 0.01* selfConsumption * sellPrice + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate)/100.0;
+        npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual NPV is: <span style='font-size:20px'>" + Math.round(RESULT).toString() + "</span> NZD";
+    };
 
 
-      /**
-       * add an event handler to the drag-and-drop-interaction function to load new layers
-       */
-      dragAndDropInteraction.on('addfeatures', function(event) {
-          console.log(event);
-          var vectorSource = new ol.source.Vector({
-              features: event.features
-          });
-          overlayGroup.getLayers().push(new ol.layer.Vector({
-              title: event.file.name,
-              source: vectorSource,
-              //style: styleFunction
-          }));
-          map.getView().fit(
-              vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
-          );
-      });
-      /**
-       * add an event handler to submit issue reports
-       */
-      $('#issueForm').submit(function (event) {
+    /**
+     * add an event handler to the drag-and-drop-interaction function to load new layers
+     */
+    dragAndDropInteraction.on('addfeatures', function(event) {
+        console.log(event);
+        var vectorSource = new ol.source.Vector({
+            features: event.features
+        });
+        overlayGroup.getLayers().push(new ol.layer.Vector({
+            title: event.file.name,
+            source: vectorSource,
+            //style: styleFunction
+        }));
+        map.getView().fit(
+            vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize())
+        );
+    });
+    /**
+     * add an event handler to submit issue reports
+     */
+    $('#issueForm').submit(function (event) {
 
-        /* stop form from submitting normally */
-          event.preventDefault();
+      /* stop form from submitting normally */
+        event.preventDefault();
 
-        /* get the action attribution from the <form action=""> element */
-          var $form = $(this), url = $form.attr('action');
+      /* get the action attribution from the <form action=""> element */
+        var $form = $(this), url = $form.attr('action');
 
-        /* send the data using post with element id "issue"*/
-          var posting = $.post(url, {issue: $('#issue').val(), address: $('#popup-content').text()});
+      /* send the data using post with element id "issue"*/
+        var posting = $.post(url, {issue: $('#issue').val(), address: $('#popup-content').text()});
 
-          posting.done(function(data) {
-              alert('You issue report has been submitted. Thank you.');
-          });
-      });
+        posting.done(function(data) {
+            alert('You issue report has been submitted. Thank you.');
+        });
+    });
 
-    </script>
-  </body>
+</script>
+</body>
 </html>
