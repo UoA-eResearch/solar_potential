@@ -115,9 +115,9 @@
 
 <body>
 
-<div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbsp&nbspAuckland Rooftop Solar Energy Potential</div>
+<div id="title-bar" style="background:#000000; font-family: Arial; color: #f1c40f;height: 50px; font-size: 40px">&nbspAuckland Rooftop Solar Energy Potential</div>
 <div id="map" class="map"></div>
-<div id="legend"><span style="color:white; font-family: Arial"> Legend (kWh/m²/year): </span></div>
+<div id="legend"><span style="color:white; font-family: Arial">Solar radiation (kWh/m²/year): </span></div>
 <div id="info"></div>
 <div class="layer-switch" id="layer-switcher"></div>
 <!--<div id="popup" class="ol-popup">
@@ -159,19 +159,18 @@
   </div>-->
 <div class="info-window">
   <div id="popup-content" name="popup-content">Click on building for more information</div>
-  <p><b>Annual average solar radiation on surface:</b></p>
+  <b>Annual average solar radiation on roof:</b>
   <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
-  <br>
   <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
   <p><b>Please select solar panel specifications:</b></p>
   <div id="popup-equipment">
     <span style="display:inline-block; width: 15px;"></span>Installation size (m²):
     <select id="Installation-Size">
-      <option value="28">14 m² standard 2 kW system</option>
-      <option value="60">20 m² standard 3 kW system</option>
-      <option value="84">28 m² standard 3 kW system</option>
-      <option value="180">36 m² standard 5 kW system</option>
-      <option value="350">50 m² standard 7 kW system</option>
+      <option value="28">14 m² approx.2 kW system</option>
+      <option value="60">20 m² approx. 3 kW system</option>
+      <option value="112">28 m² approx. 4 kW system</option>
+      <option value="180">36 m² approx. 5 kW system</option>
+      <option value="350">50 m² approx. 7 kW system</option>
     </select>
     <br>
     <span style="display:inline-block; width: 34px;"></span>Default Efficiency:
@@ -192,16 +191,22 @@
   <span style="display:inline-block; width: 0px;"></span><b>Net present value (NPV) estimation:</b>
   <div id="popup-NPV" name="popup-NPV">
     <form name="formNPV" onSubmit="return false;">
-      <span style="display:inline-block; width: 20px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="50" style="width: 40px" onchange="calculateNPV()"> % <br />
-      <span style="display:inline-block; width: 109px;"></span>Sell price: <input type="number" name="sellprice" id="input3" value="25" style="width: 40px" onchange="calculateNPV()"> cents/kWh<br />
-      <span style="display:inline-block; width: 69px;"></span>Pay-back price: <input type="number" name="paybackrate" id="input4" value="8" style="width: 40px" onchange="calculateNPV()"> cents/kWh<br />
-
+      <span style="display:inline-block; width: 20px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="0" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> % <br />
+      <span style="display:inline-block; width: 74px;"></span>Electricity rate: <input type="number" name="sellprice" id="input3" value="27" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
+      <span style="display:inline-block; width: 76px;"></span>Buy-back rate: <input type="number" name="paybackrate" id="input4" value="8" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
+      <span style="display:inline-block; width: 82px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
+      <span style="display:inline-block; width: 38px;"></span>PV system life time: <input type="number" name="pvlifetime" id="input6" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
+      <span style="display:inline-block; width: 25px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> /kW<br />
+      <span style="display:inline-block; width: 74px;"></span>Discount Rate: <input type="number" name="discountRate" id="input8" value="4" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> %<br />
+      <span style="display:inline-block; width: 5px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> /kW<br />
+      <span style="display:inline-block; width: 5px;"></span>Investment cost in year 15: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> kW<br />
     </form>
+
+    <div id="popup-AnnualRevenue"></div>
     <div id="popup-NPVestimate"></div>
 
   </div>
 
-  <br>
   <div id="report-error">
     <form id="issueForm" method="post" action="errorReport.php">
       <b>Report an issue:</b><br>
@@ -210,7 +215,6 @@
       <input type="submit" value="Submit" id="submitButton">
     </form>
   </div>
-
   <div id="readme">
     <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Read me</p></a>
   </div>
@@ -235,6 +239,7 @@
     var estimateElement = document.getElementById('popup-estimate');
     var annualRadiation = document.getElementById('total-annual-radiation');
     var npvEstimate = document.getElementById('popup-NPVestimate');
+    var annualRevenue = document.getElementById('popup-AnnualRevenue');
     var layerswitcher = new ol.control.LayerSwitcher();
     var dragAndDropInteraction = new ol.interaction.DragAndDrop({
         formatConstructors: [
@@ -291,7 +296,7 @@
         if (i + 1 == colors[scheme].length) {
             rangeStr = start + "+";
         }
-        $("#legend").append("<font face='Arial' color='white'>" + rangeStr + "</font>" + ":<span class='colorbox' style='background-color:" + colors[scheme][i] + "'></span>&nbsp&nbsp");
+        $("#legend").append("<font face='Arial' color='white'>" + rangeStr + "</font>" + ":<span class='colorbox' style='background-color:" + colors[scheme][i] + "'></span>&nbsp");
     };
 
 
@@ -413,7 +418,8 @@
 
                 var addressInfoElement = document.getElementById('popup-content');
                 var solarInfoElement = document.getElementById('popup-solarenergyinfo');
-                var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total')
+                var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total');
+                var annualRevenue = document.getElementById('popup-AnnualRevenue');
                 if (r.address == '_ _') r.address = "Address unknown";
               /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
                r.up_env,
@@ -433,18 +439,14 @@
 
                 addressInfoElement.innerHTML = addressInfo.join("<br>");
                 solarInfoElement.innerHTML = solarInfo.join("<br>");
-                solarInfoTotalElement.innerHTML = "<b>" + "Total annual solar radiation on roof：" + "</b><br /><br />&nbsp<span style='font-size: 40px'><b>"+ solarInfoTotal + "</b></span>";
+                solarInfoTotalElement.innerHTML = "<b>" + "Annual solar radiation on roof：</b><br/>" + solarInfoTotal;
                 sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
                 efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
                 var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
                 annualRadiation.value = annualGeneration;
                 console.log(annualRadiation.value);
                 estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
-                var selfConsumption = document.formNPV.selfconsumption.value;
-                var sellPrice = document.formNPV.sellprice.value;
-                var paybackRate = document.formNPV.paybackrate.value;
-                var RESULT = (0.01 * annualRadiation.value * selfConsumption * sellPrice + (1.0 - 0.01 * selfConsumption) * annualRadiation.value * paybackRate)/100.0;
-                npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual NPV is: <span style='font-size:20px'>" + Math.round(RESULT).toString() + "</span> NZD";
+                calculateAnnualRevenue();
                 //overlay.setPosition(coordinate);
             } else {
                 console.log('No available info')
@@ -462,6 +464,7 @@
         var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+        calculateAnnualRevenue()
     });
 
     efficiencyElement.addEventListener("change", function() {
@@ -470,6 +473,7 @@
         var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
+        calculateAnnualRevenue()
     });
 
     /**
@@ -482,15 +486,32 @@
         annualRadiation.value = RESULT;
         //document.TESTING.OUTPUT1.value = RESULT;
         estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
+        calculateAnnualRevenue()
     };
 
-    function calculateNPV() {
-        var selfConsumption = document.formNPV.selfconsumption.value;
-        var sellPrice = document.formNPV.sellprice.value;
-        var paybackRate = document.formNPV.paybackrate.value;
-        var annualRadiation = document.getElementById('total-annual-radiation').value;
-        var RESULT = (annualRadiation * 0.01* selfConsumption * sellPrice + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate)/100.0;
-        npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual NPV is: <span style='font-size:20px'>" + Math.round(RESULT).toString() + "</span> NZD";
+    function calculateAnnualRevenue() {
+        var selfConsumption = Number(document.formNPV.selfconsumption.value);
+        var electricityPrice = Number(document.formNPV.sellprice.value);
+        var paybackRate = Number(document.formNPV.paybackrate.value);
+        var theNthYear = Number(document.formNPV.thenthyear.value);
+        var pvLifeTime = Number(document.formNPV.pvlifetime.value);
+        var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
+        var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
+        var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
+        var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
+        var sumOfAnnual = 0;
+        var maintenanceCost = 0;
+        var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
+        var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
+        for (var i = 1; i < pvLifeTime+1; i++) {
+            var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
+            sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
+            maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
+        };
+        var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
+
+        annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue is: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
+        npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>NPV is: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
     };
 
 
