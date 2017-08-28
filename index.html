@@ -235,6 +235,8 @@
     /**
      * Elements that make up the popup.
      */
+    //var boundarySelected = Null;
+    var source = new ol.source.Vector();
     /*var container = document.getElementById('popup');*/
     var content = document.getElementById('popup-content');
     /*var closer = document.getElementById('popup-closer');*/
@@ -254,6 +256,7 @@
             ol.format.TopoJSON
         ]
     });
+
 
 
 
@@ -306,7 +309,15 @@
 
     /**
      * Add default layers from different sources
+     *
      */
+
+    var wktStr = "MULTIPOLYGON(((19456041.3926809 -4417751.40231222, 19456041.3926809 -4417751.40231222, 19456075.2280554 -4417762.54568568, 19456079.4427404 -4417762.64322709, 19456088.9017478 -4417763.58202355, 19456098.3848616 -4417765.82196582, 19456108.2553563 -4417768.9842535, 19456117.3959889 -4417772.71787798, 19456126.3720866 -4417777.57023304, 19456134.2414022 -4417782.62921166, 19456142.3129005 -4417788.61400199, 19456149.0958555 -4417794.99476162, 19456155.1522732 -4417802.13287726, 19456158.4585781 -4417806.35882666, 19456162.1114819 -4417808.96937215, 19456165.5913403 -4417811.30981477, 19456168.758946 -4417813.65609364, 19456166.2476456 -4417817.56110052, 19456169.8020816 -4417823.42695082, 19456162.5474329 -4417844.61969943, 19456174.2216531 -4417848.65049675, 19456166.9822751 -4417869.79862659, 19456155.3080316 -4417865.76768871, 19456148.7271012 -4417884.99216755, 19456140.2690396 -4417888.12513467, 19456131.9891691 -4417890.88299969, 19456123.6989594 -4417893.08308964, 19456114.8398518 -4417894.55027293, 19456105.0415508 -4417895.29109142, 19456095.9696817 -4417895.27466891, 19456086.143835 -4417894.52866928, 19456076.8560207 -4417892.84287902, 19456066.8141085 -4417890.42751261, 19456066.0013826 -4417890.13211893, 19455988.0402852 -4417895.43170879, 19455987.3611781 -4417885.35442314, 19456034.3395295 -4417873.95868096, 19456027.3378432 -4417868.10950475, 19456021.1169143 -4417862.08989023, 19456015.6364477 -4417856.05656996, 19456010.138652 -4417849.0938488, 19456005.367425 -4417841.37390461, 19456002.1145927 -4417835.67087127, 19456008.9103625 -4417832.7548974, 19456015.5733349 -4417830.57602609, 19456015.6615096 -4417827.42272394, 19456016.0962869 -4417820.9070448, 19456017.2574978 -4417813.63414872, 19456019.1590296 -4417806.34730383, 19456021.4478076 -4417799.98295092, 19456024.840184 -4417793.22609895, 19456030.0694701 -4417785.69116183, 19456026.4464813 -4417779.99507984, 19456022.6212046 -4417773.37305962, 19456032.9092401 -4417769.09037552, 19456037.528038 -4417767.48181584, 19456036.0935289 -4417757.89359131, 19456038.9644859 -4417758.83914038, 19456041.3926809 -4417751.40231222)))";
+    var geojson_options = {};
+    var wkt_format = new ol.format.WKT();
+    var testFeature = wkt_format.readFeature(wktStr, {dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857'});
+    /*var geojson_format = new OpenLayers.Format.GeoJSON(testFeature);
+     var out = geojson.write(testFeature);*/
     var overlayGroup = new ol.layer.Group({
         'title': 'Overlays',
         zIndex: 10,
@@ -326,16 +337,18 @@
                 }),
                 extent: extent
             }),
-            /*
-
+/*
             new ol.layer.Vector({
                 source: new ol.source.Vector({
-                    url: '',
-                    format: new
+                  features: [testFeature]
                 })
 
             }),
             */
+            new ol.layer.Vector({
+              source: source,
+            }),
+
 
             new ol.layer.Tile({
                 title: 'City labels',
@@ -416,7 +429,6 @@
     });
     map.addControl(geocoder);
 
-
     /**
      * Add a click handler to the map to render the popup.
      */
@@ -474,13 +486,23 @@
                     var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
                 annualRadiation.value = annualGeneration;
 
-                var wktStr = 'MULTIPOLYGON (((19459143.3701184 -4427521.92901912)))';
-                var geojson_options = {};
-                var wkt_format = new OpenLayers.Format.WKT();
-                var testFeature = wkt_format.read(wktStr);
-                var geojson_format = new OpenLayers.Format.GeoJSON(testFeature);
-                var out = geojson.write(testFeature);
-                console.log(geojson_format);
+                var wktStr = r.the_geom;
+                console.log(r.the_geom);
+                var parsedWKT = parseWKTToMultipolygonWKT(wktStr);
+                console.log(parsedWKT);
+                var wkt_format = new ol.format.WKT();
+                var polygonFeature = wkt_format.readFeature(wktStr, {dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857'});
+
+                var boundaryPolygon = new ol.layer.Vector({
+                  features: [testFeature],
+                });
+                //boundarySelected = 1;
+                map.addLayer(boundaryPolygon);
+                source = new ol.source.Vector({
+                  features: [testFeature],
+                });
+                map.getView().fit(source.getExtent());
+
                 estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
                 calculateAnnualRevenue();
                 //overlay.setPosition(coordinate);
@@ -534,43 +556,7 @@
         calculateAnnualRevenue()
     });
 
-    /**
-     * calculate annual generation based on input efficiency
-     */
-    function calculate() {
-        var efficiencyVal = document.TESTING.INPUT1.value,
-            installationSize = sizeElement.options[sizeElement.selectedIndex].value;
-        RESULT = efficiencyVal * installationSize* 3.65;
-        annualRadiation.value = RESULT;
-        //document.TESTING.OUTPUT1.value = RESULT;
-        estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
-        calculateAnnualRevenue()
-    };
 
-    function calculateAnnualRevenue() {
-        var selfConsumption = Number(document.formNPV.selfconsumption.value);
-        var electricityPrice = Number(document.formNPV.sellprice.value);
-        var paybackRate = Number(document.formNPV.paybackrate.value);
-        var theNthYear = Number(document.formNPV.thenthyear.value);
-        var pvLifeTime = Number(document.formNPV.pvlifetime.value);
-        var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
-        var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
-        var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
-        var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
-        var sumOfAnnual = 0;
-        var maintenanceCost = 0;
-        var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
-        var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
-        for (var i = 1; i < pvLifeTime+1; i++) {
-            var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
-            sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
-            maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
-        };
-        var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
-
-        annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue is: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
-        npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>NPV is: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
-    };
 
 
     /**
@@ -608,6 +594,70 @@
             alert('You issue report has been submitted. Thank you.');
         });
     });
+
+    /**
+     * calculate annual generation based on input efficiency
+     */
+    function calculate() {
+      var efficiencyVal = document.TESTING.INPUT1.value,
+              installationSize = sizeElement.options[sizeElement.selectedIndex].value;
+      RESULT = efficiencyVal * installationSize* 3.65;
+      annualRadiation.value = RESULT;
+      //document.TESTING.OUTPUT1.value = RESULT;
+      estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
+      calculateAnnualRevenue()
+    };
+
+    function calculateAnnualRevenue() {
+      var selfConsumption = Number(document.formNPV.selfconsumption.value);
+      var electricityPrice = Number(document.formNPV.sellprice.value);
+      var paybackRate = Number(document.formNPV.paybackrate.value);
+      var theNthYear = Number(document.formNPV.thenthyear.value);
+      var pvLifeTime = Number(document.formNPV.pvlifetime.value);
+      var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
+      var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
+      var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
+      var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
+      var sumOfAnnual = 0;
+      var maintenanceCost = 0;
+      var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
+      var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
+      for (var i = 1; i < pvLifeTime+1; i++) {
+        var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
+        sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
+        maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
+      };
+      var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
+
+      annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue is: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
+      npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>NPV is: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
+    };
+
+    /**
+     * parse WKT to multipolygon wkt
+     */
+    function parseWKTToMultipolygonWKT(wkt) {
+      var inputStr = wkt;
+
+      var splitStr = inputStr.split('(((');
+      var headStr = splitStr[0].split(' ')[0];
+
+      var coordinates = splitStr[1].split(')))');
+      coordinates = coordinates[0];
+      var coordinatesList = coordinates.split(',');
+      // get the first x and y
+      var coordinateStr = (coordinatesList[0].split(' '))[0] + ' ' + (coordinatesList[0].split(' '))[1];
+      var subCoordinatesList = coordinatesList.slice(1);
+      var id;
+      for (id in subCoordinatesList) {
+        var coordinateList = subCoordinatesList[id].split(' ');
+        var coordinateStrTmp = coordinateList[0] + ' ' + coordinateList[1];
+        coordinateStr = coordinateStr+ ', '+ coordinateStrTmp;
+      };
+      wktStr = headStr + "(((" + coordinateStr + ")))";
+      console.log(wktStr);
+      return wktStr;
+    };
 
 </script>
 </body>
