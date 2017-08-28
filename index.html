@@ -92,6 +92,19 @@
       font-family: Arial;
     }
 
+    .instructions-window {
+        width: 400px;
+        height: 300px;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        color: #E9D460;
+        font-family: Arial;
+    }
+
     .layer-switcher {
       position: fixed !important;
       top: 6% !important;
@@ -219,9 +232,17 @@
       <input type="submit" value="Submit" id="submitButton">
     </form>
   </div>
-  <div id="readme">
-    <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Read me</p></a>
-  </div>
+</div>
+
+<div class="instructions-window">
+    <p>1) An average Auckland household consumes about 7000 kWh of electricity a year - what's your consumption?</p>
+    <p>2) Compare your electricity demand with your chosen PV system generation.</p>
+    <p>3) How much of the PV system generation would you consume yourself? This is your self-consumption rate.</p>
+    <p>4) Find your roof and click on it for solar assessment.</p>
+    <p>5) Use the 'Solar assessment tool' panel for generation and economic estimates.</p>
+    <div id="readmenew">
+        <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Click here for more information.</p></a>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -235,7 +256,7 @@
     /**
      * Elements that make up the popup.
      */
-    //var boundarySelected = Null;
+    var boundarySelected = 0;
     var source = new ol.source.Vector();
     /*var container = document.getElementById('popup');*/
     var content = document.getElementById('popup-content');
@@ -337,18 +358,25 @@
                 }),
                 extent: extent
             }),
-/*
+
             new ol.layer.Vector({
                 source: new ol.source.Vector({
                   features: [testFeature]
                 })
 
             }),
-            */
-            new ol.layer.Vector({
-              source: source,
-            }),
 
+            /*new ol.layer.Vector({
+              source: source,
+               style: new ol.style.Style({
+                   fill: null,
+                   stroke: new ol.style.Stroke({
+                       color: 'green',
+                       width: 3
+                       })
+                   })
+            }),
+*/
 
             new ol.layer.Tile({
                 title: 'City labels',
@@ -358,6 +386,13 @@
                 opacity: .5
             })
         ]
+    });
+
+
+    var boundaryvector = new ol.layer.Vector({
+        source: source,
+
+
     });
 
 
@@ -400,7 +435,9 @@
 
                 })
             }),
-            overlayGroup
+            overlayGroup,
+            boundaryvector
+
         ],
         view: new ol.View({
             center: ol.proj.fromLonLat([174.766462, -36.891249]),
@@ -487,21 +524,15 @@
                 annualRadiation.value = annualGeneration;
 
                 var wktStr = r.the_geom;
-                console.log(r.the_geom);
                 var parsedWKT = parseWKTToMultipolygonWKT(wktStr);
                 console.log(parsedWKT);
                 var wkt_format = new ol.format.WKT();
                 var polygonFeature = wkt_format.readFeature(wktStr, {dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857'});
 
-                var boundaryPolygon = new ol.layer.Vector({
-                  features: [testFeature],
-                });
-                //boundarySelected = 1;
-                map.addLayer(boundaryPolygon);
-                source = new ol.source.Vector({
-                  features: [testFeature],
-                });
-                map.getView().fit(source.getExtent());
+                source.clear();
+                source.addFeature(polygonFeature);
+                //map.getView().fit(source.getExtent());
+                boundarySelected = 1;
 
                 estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
                 calculateAnnualRevenue();
@@ -654,7 +685,7 @@
         var coordinateStrTmp = coordinateList[0] + ' ' + coordinateList[1];
         coordinateStr = coordinateStr+ ', '+ coordinateStrTmp;
       };
-      wktStr = headStr + "(((" + coordinateStr + ")))";
+      wktStr = "LineString(" + coordinateStr + ")";
       console.log(wktStr);
       return wktStr;
     };
