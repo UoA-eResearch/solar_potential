@@ -15,6 +15,13 @@
     .ol-control button{
       background-color: rgba(40, 40, 40, 0.85) !important;
     }
+    .ol-zoomslider {
+      top: 500px !important;
+    }
+    .ol-zoom {
+      top: 440px !important;
+    }
+
     .ol-scale-line {
       background: black;
       padding: 5px;
@@ -96,7 +103,7 @@
         width: 400px;
         height: 300px;
         position: fixed;
-        bottom: 10px;
+        bottom: 520px;
         left: 10px;
         z-index: 10;
         background-color: rgba(0, 0, 0, 0.5);
@@ -107,8 +114,13 @@
 
     .layer-switcher {
       position: fixed !important;
-      top: 6% !important;
-      right: 3% !important;
+      top: 50% !important;
+      right: 95% !important;
+    }
+
+    .layer-switcher.shown.ol-control:hover {
+      background-color: transparent;
+      right: 300px !important;
     }
 
 
@@ -686,8 +698,6 @@
       var inputStr = wkt;
 
       var splitStr = inputStr.split('(((');
-      var headStr = splitStr[0].split(' ')[0];
-
       var coordinates = splitStr[1].split(')))');
       coordinates = coordinates[0];
       var coordinatesList = coordinates.split(',');
