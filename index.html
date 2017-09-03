@@ -9,6 +9,7 @@
       width: 100%;
       background-color: #a3ccff;
     }
+
     a:visited {
       color: white;
     }
@@ -95,33 +96,40 @@
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
       color: #E9D460;
+      overflow: auto;
       /*<!--#FFCA28-->;*/
       font-family: Arial;
+
     }
 
     .instructions-window {
         width: 400px;
         height: 300px;
         position: fixed;
-        bottom: 520px;
+        bottom: 540px;
         left: 10px;
         z-index: 10;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        color: #E9D460;
+        color: white;
         font-family: Arial;
     }
 
     .layer-switcher {
       position: fixed !important;
-      top: 50% !important;
-      right: 95% !important;
+      top: 46% !important;
+      right: 97% !important;
     }
 
-    .layer-switcher.shown.ol-control:hover {
+    /*.layer-switcher.shown.ol-control:hover {
       background-color: transparent;
       right: 300px !important;
     }
+    */
+    .layer-switcher.shown {
+      right: 85% !important;
+    }
+
 
 
   </style>
@@ -183,6 +191,7 @@
   </div>
   </div>-->
 <div class="info-window">
+  <div id="panel-title" align="center" name="panel-title" style="font-size: 20px"><b>Solar assessment tool</b></div>
   <div id="popup-content" name="popup-content">Click on building for more information</div>
   <b>Annual average solar radiation on roof:</b>
   <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
