@@ -9,12 +9,9 @@
       width: 100%;
       background-color: #a3ccff;
     }
-    a:visited {
-      color: white;
-    }
-    .ol-control button{
-      background-color: rgba(40, 40, 40, 0.85) !important;
-    }
+
+
+
     .ol-scale-line {
       background: black;
       padding: 5px;
@@ -88,15 +85,47 @@
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
       color: #E9D460;
+      overflow: auto;
       /*<!--#FFCA28-->;*/
       font-family: Arial;
+
     }
 
+    .instructions-window {
+        width: 400px;
+        height: 300px;
+        position: fixed;
+        top: 7%;
+        left: 1%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        color: white;
+        font-family: Arial;
+    }
+
+    a:visited {
+      color: white;
+    }
+    .ol-control button{
+      background-color: rgba(40, 40, 40, 0.85) !important;
+    }
+    .ol-zoomslider {
+      top: 60% !important;
+    }
+    .ol-zoom {
+      top: 51% !important;
+    }
     .layer-switcher {
       position: fixed !important;
-      top: 6% !important;
-      right: 3% !important;
+      top: 50% !important;
+      right: 96.5% !important;
     }
+
+    .layer-switcher.shown {
+      right: 85% !important;
+    }
+
 
 
   </style>
@@ -158,18 +187,23 @@
   </div>
   </div>-->
 <div class="info-window">
+  <div id="panel-title" align="center" name="panel-title" style="font-size: 20px"><b>Solar assessment tool</b></div>
   <div id="popup-content" name="popup-content">Click on building for more information</div>
   <b>Annual average solar radiation on roof:</b>
   <div id="popup-solarenergyinfo" name="popup-solarenergyinfo"></div>
+    <input type='hidden' id="top-14" value="0">
+    <input type='hidden' id="top-20" value="0">
+    <input type='hidden' id="top-28" value="0">
+    <input type='hidden' id="top-36" value="0">
   <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
   <p><b>Please select solar panel specifications:</b></p>
   <div id="popup-equipment">
     <span style="display:inline-block; width: 15px;"></span>Installation size (m²):
     <select id="Installation-Size">
-      <option value="28">14 m² approx.2 kW system</option>
-      <option value="60">20 m² approx. 3 kW system</option>
-      <option value="112">28 m² approx. 4 kW system</option>
-      <option value="180">36 m² approx. 5 kW system</option>
+      <option value="14">14 m² approx.2 kW system</option>
+      <option value="20">20 m² approx. 3 kW system</option>
+      <option value="28">28 m² approx. 4 kW system</option>
+      <option value="36">36 m² approx. 5 kW system</option>
       <option value="350">50 m² approx. 7 kW system</option>
     </select>
     <br>
@@ -194,12 +228,12 @@
       <span style="display:inline-block; width: 20px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="0" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> % <br />
       <span style="display:inline-block; width: 74px;"></span>Electricity rate: <input type="number" name="sellprice" id="input3" value="27" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
       <span style="display:inline-block; width: 76px;"></span>Buy-back rate: <input type="number" name="paybackrate" id="input4" value="8" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
-      <span style="display:inline-block; width: 82px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
-      <span style="display:inline-block; width: 38px;"></span>PV system life time: <input type="number" name="pvlifetime" id="input6" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
-      <span style="display:inline-block; width: 25px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> /kW<br />
       <span style="display:inline-block; width: 74px;"></span>Discount Rate: <input type="number" name="discountRate" id="input8" value="4" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> %<br />
-      <span style="display:inline-block; width: 5px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> /kW<br />
-      <span style="display:inline-block; width: 5px;"></span>Investment cost in year 15: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> kW<br />
+      <span style="display:inline-block; width: 82px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
+      <span style="display:inline-block; width: 38px;"></span>PV system economic life time: <input type="number" name="pvlifetime" id="input6" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
+      <span style="display:inline-block; width: 25px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" step="100" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 5px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 5px;"></span>Investment cost in year 15: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
     </form>
 
     <div id="popup-AnnualRevenue"></div>
@@ -215,9 +249,17 @@
       <input type="submit" value="Submit" id="submitButton">
     </form>
   </div>
-  <div id="readme">
-    <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Read me</p></a>
-  </div>
+</div>
+
+<div class="instructions-window">
+    <p>1) An average Auckland household consumes about 7000 kWh of electricity a year - what's your consumption?</p>
+    <p>2) Compare your electricity demand with your chosen PV system generation.</p>
+    <p>3) How much of the PV system generation would you consume yourself? This is your self-consumption rate.</p>
+    <p>4) Find your roof and click on it for solar assessment.</p>
+    <p>5) Use the 'Solar assessment tool' panel for generation and economic estimates.</p>
+    <div id="readmenew">
+        <a href="resources/readme.pdf" style="color:#E9D460" target="_blank"><p style="text-align:right">Click here for more information.</p></a>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -231,6 +273,8 @@
     /**
      * Elements that make up the popup.
      */
+    var boundarySelected = 0;
+    var source = new ol.source.Vector();
     /*var container = document.getElementById('popup');*/
     var content = document.getElementById('popup-content');
     /*var closer = document.getElementById('popup-closer');*/
@@ -250,6 +294,7 @@
             ol.format.TopoJSON
         ]
     });
+
 
 
 
@@ -302,7 +347,15 @@
 
     /**
      * Add default layers from different sources
+     *
      */
+
+    var wktStr = "LINESTRING(19456041.3926809 -4417751.40231222, 19456041.3926809 -4417751.40231222, 19456075.2280554 -4417762.54568568, 19456079.4427404 -4417762.64322709, 19456088.9017478 -4417763.58202355, 19456098.3848616 -4417765.82196582, 19456108.2553563 -4417768.9842535, 19456117.3959889 -4417772.71787798, 19456126.3720866 -4417777.57023304, 19456134.2414022 -4417782.62921166, 19456142.3129005 -4417788.61400199, 19456149.0958555 -4417794.99476162, 19456155.1522732 -4417802.13287726, 19456158.4585781 -4417806.35882666, 19456162.1114819 -4417808.96937215, 19456165.5913403 -4417811.30981477, 19456168.758946 -4417813.65609364, 19456166.2476456 -4417817.56110052, 19456169.8020816 -4417823.42695082, 19456162.5474329 -4417844.61969943, 19456174.2216531 -4417848.65049675, 19456166.9822751 -4417869.79862659, 19456155.3080316 -4417865.76768871, 19456148.7271012 -4417884.99216755, 19456140.2690396 -4417888.12513467, 19456131.9891691 -4417890.88299969, 19456123.6989594 -4417893.08308964, 19456114.8398518 -4417894.55027293, 19456105.0415508 -4417895.29109142, 19456095.9696817 -4417895.27466891, 19456086.143835 -4417894.52866928, 19456076.8560207 -4417892.84287902, 19456066.8141085 -4417890.42751261, 19456066.0013826 -4417890.13211893, 19455988.0402852 -4417895.43170879, 19455987.3611781 -4417885.35442314, 19456034.3395295 -4417873.95868096, 19456027.3378432 -4417868.10950475, 19456021.1169143 -4417862.08989023, 19456015.6364477 -4417856.05656996, 19456010.138652 -4417849.0938488, 19456005.367425 -4417841.37390461, 19456002.1145927 -4417835.67087127, 19456008.9103625 -4417832.7548974, 19456015.5733349 -4417830.57602609, 19456015.6615096 -4417827.42272394, 19456016.0962869 -4417820.9070448, 19456017.2574978 -4417813.63414872, 19456019.1590296 -4417806.34730383, 19456021.4478076 -4417799.98295092, 19456024.840184 -4417793.22609895, 19456030.0694701 -4417785.69116183, 19456026.4464813 -4417779.99507984, 19456022.6212046 -4417773.37305962, 19456032.9092401 -4417769.09037552, 19456037.528038 -4417767.48181584, 19456036.0935289 -4417757.89359131, 19456038.9644859 -4417758.83914038, 19456041.3926809 -4417751.40231222)";
+    var geojson_options = {};
+    var wkt_format = new ol.format.WKT();
+    var testFeature = wkt_format.readFeature(wktStr, {dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857'});
+    /*var geojson_format = new OpenLayers.Format.GeoJSON(testFeature);
+     var out = geojson.write(testFeature);*/
     var overlayGroup = new ol.layer.Group({
         'title': 'Overlays',
         zIndex: 10,
@@ -322,6 +375,29 @@
                 }),
                 extent: extent
             }),
+
+          /*new ol.layer.Vector({
+                source: new ol.source.Vector({
+                  features: [testFeature]
+                })
+
+            }),
+            */
+
+          new ol.layer.Vector({
+              source: source,
+               style: new ol.style.Style({
+                   fill: new ol.style.Fill({
+                       color: 'rgba(255, 255, 255, 0.5)'
+                   }),
+                   stroke: new ol.style.Stroke({
+                       color: 'green',
+                       width: 3
+                       })
+                   })
+            }),
+
+
             new ol.layer.Tile({
                 title: 'City labels',
                 source: new ol.source.Stamen({
@@ -330,6 +406,13 @@
                 opacity: .5
             })
         ]
+    });
+
+
+    var boundaryvector = new ol.layer.Vector({
+        source: source,
+
+
     });
 
 
@@ -372,7 +455,9 @@
 
                 })
             }),
-            overlayGroup
+            overlayGroup,
+            boundaryvector
+
         ],
         view: new ol.View({
             center: ol.proj.fromLonLat([174.766462, -36.891249]),
@@ -401,24 +486,27 @@
     });
     map.addControl(geocoder);
 
-
     /**
      * Add a click handler to the map to render the popup.
      */
     map.on('singleclick', function(evt) {
         var coordinate = evt.coordinate;
         var issueFormElement = document.getElementById('issue');
+        var coordinate_new = ol.proj.fromLonLat([174.766462, -36.891249]);
         issueFormElement.value = '';
         $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
             if (data.results.length >= 1) {
                 var r = data.results[0];
-                console.log(r);
+                /*console.log(r);*/
               /*var infoElement = document.getElementById('popup-content');*/
                 var estimateElement = document.getElementById('popup-estimate');
-
                 var addressInfoElement = document.getElementById('popup-content');
                 var solarInfoElement = document.getElementById('popup-solarenergyinfo');
                 var solarInfoTotalElement = document.getElementById('popup-solarenergyinfo-total');
+                var top14Val = document.getElementById('top-14');
+                var top20Val = document.getElementById('top-20');
+                var top28Val = document.getElementById('top-28');
+                var top36Val = document.getElementById('top-36');
                 var annualRevenue = document.getElementById('popup-AnnualRevenue');
                 if (r.address == '_ _') r.address = "Address unknown";
               /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
@@ -436,15 +524,48 @@
                     "Top 28 m²: " + (Math.round(parseInt(r.top28) / 28)).toString() + " kWh/m²",
                     "Top 36 m²: " + (Math.round(parseInt(r.top36) / 36)).toString() + " kWh/m²"];
                 var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
-
+                top14Val.value = (Math.round(parseInt(r.top14) / 14)).toString();
+                top20Val.value = (Math.round(parseInt(r.top20) / 20)).toString();
+                top28Val.value = (Math.round(parseInt(r.top28) / 28)).toString();
+                top36Val.value = (Math.round(parseInt(r.top36) / 36)).toString();
                 addressInfoElement.innerHTML = addressInfo.join("<br>");
                 solarInfoElement.innerHTML = solarInfo.join("<br>");
                 solarInfoTotalElement.innerHTML = "<b>" + "Annual solar radiation on roof：</b><br/>" + solarInfoTotal;
                 sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
                 efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-                var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+                if (sizeSelected == 14)
+                    var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                else if (sizeSelected == 20)
+                    var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                else if (sizeSelected == 28)
+                    var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                else if (sizeSelected == 36)
+                    var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
                 annualRadiation.value = annualGeneration;
-                console.log(annualRadiation.value);
+
+                var wktStr = r.the_geom;
+                var parsedWKT = parseWKTToMultipolygonWKT(wktStr);
+                console.log(parsedWKT);
+                var wkt_format = new ol.format.WKT();
+                var polygonFeature = wkt_format.readFeature(parsedWKT, {dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857'});
+
+                source.clear();
+                source.addFeature(polygonFeature);
+                /*var newLayer = ol.layer.Vector({
+                    source: source,
+                    style: new ol.style.Style({
+                        stroke: new ol.style.Stroke({
+                            color: 'green',
+                            width: 3
+                        })
+                    })
+                });
+                map.addLayer(newLayer);
+                */
+
+                //map.getView().fit(source.getExtent());
+                boundarySelected = 1;
+
                 estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
                 calculateAnnualRevenue();
                 //overlay.setPosition(coordinate);
@@ -459,60 +580,46 @@
      * according to different equipment size and efficiency
      */
     sizeElement.addEventListener("change", function() {
+        var top14Val = document.getElementById('top-14');
+        var top20Val = document.getElementById('top-20');
+        var top28Val = document.getElementById('top-28');
+        var top36Val = document.getElementById('top-36');
         sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
         efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-        var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+        if (sizeSelected == 14)
+            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 20)
+            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 28)
+            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 36)
+            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
         calculateAnnualRevenue()
     });
 
     efficiencyElement.addEventListener("change", function() {
+        var top14Val = document.getElementById('top-14');
+        var top20Val = document.getElementById('top-20');
+        var top28Val = document.getElementById('top-28');
+        var top36Val = document.getElementById('top-36');
         sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
         efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
-        var annualGeneration = parseInt(sizeSelected) * parseInt(efficiencySelected)*3.65;
+        if (sizeSelected == 14)
+            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 20)
+            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 28)
+            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+        else if (sizeSelected == 36)
+            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
         calculateAnnualRevenue()
     });
 
-    /**
-     * calculate annual generation based on input efficiency
-     */
-    function calculate() {
-        var efficiencyVal = document.TESTING.INPUT1.value,
-            installationSize = sizeElement.options[sizeElement.selectedIndex].value;
-        RESULT = efficiencyVal * installationSize* 3.65;
-        annualRadiation.value = RESULT;
-        //document.TESTING.OUTPUT1.value = RESULT;
-        estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
-        calculateAnnualRevenue()
-    };
 
-    function calculateAnnualRevenue() {
-        var selfConsumption = Number(document.formNPV.selfconsumption.value);
-        var electricityPrice = Number(document.formNPV.sellprice.value);
-        var paybackRate = Number(document.formNPV.paybackrate.value);
-        var theNthYear = Number(document.formNPV.thenthyear.value);
-        var pvLifeTime = Number(document.formNPV.pvlifetime.value);
-        var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
-        var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
-        var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
-        var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
-        var sumOfAnnual = 0;
-        var maintenanceCost = 0;
-        var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
-        var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
-        for (var i = 1; i < pvLifeTime+1; i++) {
-            var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
-            sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
-            maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
-        };
-        var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
-
-        annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue is: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
-        npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>NPV is: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
-    };
 
 
     /**
@@ -550,6 +657,68 @@
             alert('You issue report has been submitted. Thank you.');
         });
     });
+
+    /**
+     * calculate annual generation based on input efficiency
+     */
+    function calculate() {
+      var efficiencyVal = document.TESTING.INPUT1.value,
+              installationSize = sizeElement.options[sizeElement.selectedIndex].value;
+      RESULT = efficiencyVal * installationSize* 3.65;
+      annualRadiation.value = RESULT;
+      //document.TESTING.OUTPUT1.value = RESULT;
+      estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
+      calculateAnnualRevenue()
+    };
+
+    function calculateAnnualRevenue() {
+      var selfConsumption = Number(document.formNPV.selfconsumption.value);
+      var electricityPrice = Number(document.formNPV.sellprice.value);
+      var paybackRate = Number(document.formNPV.paybackrate.value);
+      var theNthYear = Number(document.formNPV.thenthyear.value);
+      var pvLifeTime = Number(document.formNPV.pvlifetime.value);
+      var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
+      var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
+      var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
+      var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
+      var sumOfAnnual = 0;
+      var maintenanceCost = 0;
+      var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
+      var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
+      for (var i = 1; i < pvLifeTime+1; i++) {
+        var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
+        sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
+        maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
+      };
+      var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
+
+      annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue is: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
+      npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>NPV is: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
+    };
+
+    /**
+     * parse WKT to multipolygon wkt
+     */
+    function parseWKTToMultipolygonWKT(wkt) {
+      var inputStr = wkt;
+
+      var splitStr = inputStr.split('(((');
+      var coordinates = splitStr[1].split(')))');
+      coordinates = coordinates[0];
+      var coordinatesList = coordinates.split(',');
+      // get the first x and y
+      var coordinateStr = (coordinatesList[0].split(' '))[0] + ' ' + (coordinatesList[0].split(' '))[1];
+      var subCoordinatesList = coordinatesList.slice(1);
+      var id;
+      for (id in subCoordinatesList) {
+        var coordinateList = subCoordinatesList[id].split(' ');
+        var coordinateStrTmp = coordinateList[0] + ' ' + coordinateList[1];
+        coordinateStr = coordinateStr+ ', '+ coordinateStrTmp;
+      };
+      wktStr = "MULTILINESTRING((" + coordinateStr + "))";
+      console.log(wktStr);
+      return wktStr;
+    };
 
 </script>
 </body>
