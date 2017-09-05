@@ -204,7 +204,7 @@
       <option value="20">20 m² approx. 3 kW system</option>
       <option value="28">28 m² approx. 4 kW system</option>
       <option value="36">36 m² approx. 5 kW system</option>
-      <option value="350">50 m² approx. 7 kW system</option>
+      <!--<option value="350">50 m² approx. 7 kW system</option>-->
     </select>
     <br>
     <span style="display:inline-block; width: 34px;"></span>Default Efficiency:
@@ -230,7 +230,7 @@
       <span style="display:inline-block; width: 76px;"></span>Buy-back rate: <input type="number" name="paybackrate" id="input4" value="8" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
       <span style="display:inline-block; width: 74px;"></span>Discount Rate: <input type="number" name="discountRate" id="input8" value="4" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> %<br />
       <span style="display:inline-block; width: 82px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
-      <span style="display:inline-block; width: 38px;"></span>PV system economic life time: <input type="number" name="pvlifetime" id="input6" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
+      <span style="display:inline-block; width: 38px;"></span>PV system economic life time: <input type="number" name="pvlifetime" id="input6" value="25" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
       <span style="display:inline-block; width: 25px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" step="100" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
       <span style="display:inline-block; width: 5px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
       <span style="display:inline-block; width: 5px;"></span>Investment cost in year 15: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
@@ -534,13 +534,13 @@
                 sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
                 efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
                 if (sizeSelected == 14)
-                    var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                    var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
                 else if (sizeSelected == 20)
-                    var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                    var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
                 else if (sizeSelected == 28)
-                    var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                    var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
                 else if (sizeSelected == 36)
-                    var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+                    var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
                 annualRadiation.value = annualGeneration;
 
                 var wktStr = r.the_geom;
@@ -584,16 +584,16 @@
         var top20Val = document.getElementById('top-20');
         var top28Val = document.getElementById('top-28');
         var top36Val = document.getElementById('top-36');
-        sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
-        efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+        var sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+        var efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
         if (sizeSelected == 14)
-            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 20)
-            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 28)
-            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 36)
-            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is: <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
         calculateAnnualRevenue()
@@ -604,16 +604,16 @@
         var top20Val = document.getElementById('top-20');
         var top28Val = document.getElementById('top-28');
         var top36Val = document.getElementById('top-36');
-        sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
-        efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
+        var sizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+        var efficiencySelected = efficiencyElement.options[efficiencyElement.selectedIndex].value;
         if (sizeSelected == 14)
-            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top14Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 20)
-            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top20Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 28)
-            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top28Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         else if (sizeSelected == 36)
-            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01;
+            var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected)*0.01*0.88;
         annualRadiation.value = annualGeneration;
         estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(annualGeneration).toString() + "</span> kWh";
         calculateAnnualRevenue()
@@ -662,11 +662,24 @@
      * calculate annual generation based on input efficiency
      */
     function calculate() {
-      var efficiencyVal = document.TESTING.INPUT1.value,
-              installationSize = sizeElement.options[sizeElement.selectedIndex].value;
-      RESULT = efficiencyVal * installationSize* 3.65;
-      annualRadiation.value = RESULT;
+      var top14Val = document.getElementById('top-14');
+      var top20Val = document.getElementById('top-20');
+      var top28Val = document.getElementById('top-28');
+      var top36Val = document.getElementById('top-36');
+      var efficiencyVal = document.TESTING.INPUT1.value;
+      var installationSize = sizeElement.options[sizeElement.selectedIndex].value;
+
+      if (installationSize == 14)
+          var RESULT = parseInt(top14Val.value) * parseInt(installationSize) * parseInt(efficiencyVal)*0.01*0.88;
+      else if (installationSize == 20)
+          var RESULT = parseInt(top20Val.value) * parseInt(installationSize) * parseInt(efficiencyVal)*0.01*0.88;
+      else if (installationSize== 28)
+          var RESULT = parseInt(top28Val.value) * parseInt(installationSize) * parseInt(efficiencyVal)*0.01*0.88;
+      else if (installationSize == 36)
+          var RESULT = parseInt(top36Val.value) * parseInt(installationSize) * parseInt(efficiencyVal)*0.01*0.88;
+
       //document.TESTING.OUTPUT1.value = RESULT;
+      annualRadiation.value = RESULT;
       estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>"+ Math.round(RESULT).toString() + "</span> kWh";
       calculateAnnualRevenue()
     };
