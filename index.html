@@ -68,9 +68,9 @@
     <input type='hidden' id="top-28" value="0">
     <input type='hidden' id="top-36" value="0">
   <div id="popup-solarenergyinfo-total" name="popup-solarenergyinfo-total"></div>
-  <p><b>Solar installation specifications:</b></p>
+  <p><b>Solar installation specifications</b></p>
   <div id="popup-equipment">
-    <span style="display:inline-block; width: 15px;"></span>Installation size (m²):
+    <span style="display:inline-block; width: 19px;"></span>Installation size (m²):
     <select id="Installation-Size">
       <option value="14">14 m² approx.2 kW system</option>
       <option value="20">20 m² approx. 3 kW system</option>
@@ -78,14 +78,14 @@
       <option value="36">36 m² approx. 5 kW system</option>
     </select>
     <br>
-    <span style="display:inline-block; width: 34px;"></span>Default efficiency:
+    <span style="display:inline-block; width: 40px;"></span>Default efficiency:
     <select id="Efficiency">
       <option value="15">15% with standard PV</option>
       <option value="19">19% with premium PV</option>
       <option value="10">10% with thin film PV</option>
     </select>
-    <form name="TESTING" onSubmit="return false;"><span style="display:inline-block; width: 0px;"></span>Customised efficiency:
-      <input type="number" name="INPUT1" id="input" style="width: 40px" onchange="calculate()">%
+    <form name="TESTING" onSubmit="return false;"><span style="display:inline-block; width: 2px;"></span> Customised efficiency:
+      <span style="display:inline-block; width: 3px;"></span><input type="number" name="INPUT1" id="input" style="width: 40px" onchange="calculate()">%
     </form>
     <input type='hidden' id="total-annual-radiation" value="0">
 
@@ -93,21 +93,20 @@
 
   </div>
   <br>
-  <span style="display:inline-block; width: 0px;"></span><b>Net present value (NPV) estimation:</b>
+  <span style="display:inline-block; width: 0px;"></span><b>Economic assessment</b>
   <div id="popup-NPV" name="popup-NPV">
     <form name="formNPV" onSubmit="return false;">
-      <span style="display:inline-block; width: 20px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="0" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> % <br />
-      <span style="display:inline-block; width: 74px;"></span>Electricity rate: <input type="number" name="sellprice" id="input3" value="27" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
-      <span style="display:inline-block; width: 76px;"></span>Buy-back rate: <input type="number" name="paybackrate" id="input4" value="8" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
-      <span style="display:inline-block; width: 74px;"></span>Discount rate: <input type="number" name="discountRate" id="input8" value="4" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> %<br />
-      <span style="display:inline-block; width: 82px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
-      <span style="display:inline-block; width: 38px;"></span>PV system economic lifetime: <input type="number" name="pvlifetime" id="input6" value="25" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
-      <span style="display:inline-block; width: 25px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" step="100" style="width: 45px" onchange="calculateAnnualRevenue()"> $/kW<br />
-      <span style="display:inline-block; width: 5px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
-      <span style="display:inline-block; width: 5px;"></span>Investment cost in year 15: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 50px;"></span>Self consumption rate: <input type="number" name="selfconsumption" id="input2" value="0" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> % <br />
+      <span style="display:inline-block; width: 104px;"></span>Electricity rate: <input type="number" name="sellprice" id="input3" value="27" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
+      <span style="display:inline-block; width: 106px;"></span>Buy-back rate: <input type="number" name="paybackrate" id="input4" value="8" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> cents/kWh<br />
+      <div id="popup-AnnualRevenue"></div>
+      <span style="display:inline-block; width: 112px;"></span>The Nth year: <input type="number" name="thenthyear" id="input5" value="1" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> th year<br />
+      <span style="display:inline-block; width: 0px;"></span>PV system economic lifetime: <input type="number" name="pvlifetime" id="input6" value="25" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> years<br />
+      <span style="display:inline-block; width: 55px;"></span>Total investment cost: <input type="number" name="investmentPerKW" id="input7" value="3000" min="0" step="100" style="width: 45px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 10px;"></span>Investment cost in 15 years: <input type="number" name="investmentCostInYear15" id="input10" value="400" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 25px;"></span>Annual maintenance cost: <input type="number" name="annualMaintenance" id="input9" value="20" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> $/kW<br />
+      <span style="display:inline-block; width: 110px;"></span>Discount rate: <input type="number" name="discountRate" id="input8" value="4" min="0" style="width: 40px" onchange="calculateAnnualRevenue()"> %<br />
     </form>
-
-    <div id="popup-AnnualRevenue"></div>
     <div id="popup-NPVestimate"></div>
 
   </div>

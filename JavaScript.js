@@ -289,19 +289,6 @@ map.on('singleclick', function(evt) {
 
             source.clear();
             source.addFeature(polygonFeature);
-            /*var newLayer = ol.layer.Vector({
-             source: source,
-             style: new ol.style.Style({
-             stroke: new ol.style.Stroke({
-             color: 'green',
-             width: 3
-             })
-             })
-             });
-             map.addLayer(newLayer);
-             */
-
-            //map.getView().fit(source.getExtent());
             boundarySelected = 1;
 
             estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
