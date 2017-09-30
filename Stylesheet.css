@@ -114,8 +114,20 @@ a:visited {
     position: fixed !important;
     top: 50% !important;
     right: 96.5% !important;
+
 }
 
 .layer-switcher.shown {
     right: 85% !important;
+}
+
+.layer-switcher .panel {
+    padding: 0 0 0 0;
+    margin: 0;
+    /*border: 4px solid #eee;*/
+    border-radius: 4px !important;
+    display: none;
+    max-height: 100%;
+    overflow-y: auto;
+    /*width: 220px !important;*/
 }
