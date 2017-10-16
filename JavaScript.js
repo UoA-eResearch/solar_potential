@@ -21,7 +21,7 @@ var efficiencyElement = document.getElementById("Efficiency");
 var estimateElement = document.getElementById('popup-estimate');
 var annualRadiation = document.getElementById('total-annual-radiation');
 var npvEstimate = document.getElementById('popup-NPVestimate');
-//var annualRevenue = document.getElementById('popup-AnnualRevenue');
+var annualRevenue = document.getElementById('popup-AnnualRevenue');
 var layerswitcher = new ol.control.LayerSwitcher();
 var dragAndDropInteraction = new ol.interaction.DragAndDrop({
     formatConstructors: [
@@ -415,27 +415,36 @@ function calculate() {
 };
 
 function calculateAnnualRevenue() {
+    var installationSizeSelected = sizeElement.options[sizeElement.selectedIndex].value;
+    if (installationSizeSelected == 14)
+        var sizeSelected = 2;
+    else if (installationSizeSelected == 20)
+        var sizeSelected = 3;
+    else if (installationSizeSelected == 28)
+        var sizeSelected = 4;
+    else if (installationSizeSelected == 36)
+        var sizeSelected = 5;
     var selfConsumption = Number(document.formNPV.selfconsumption.value);
     var electricityPrice = Number(document.formNPV.sellprice.value);
     var paybackRate = Number(document.formNPV.paybackrate.value);
-    //var theNthYear = Number(document.formNPV.thenthyear.value);
+    var theNthYear = 1.0;
     var pvLifeTime = Number(document.formNPV.pvlifetime.value);
-    var investmentPerKW = Number(document.formNPV.investmentPerKW.value);
-    var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value);
-    var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value);
+    var investmentPerKW = Number(document.formNPV.investmentPerKW.value)*sizeSelected;
+    var annualOperationMaintenanceCost = Number(document.formNPV.annualMaintenance.value) * sizeSelected;
+    var investmentCost15 = Number(document.formNPV.investmentCostInYear15.value) * sizeSelected;
     var discountRate = 0.01 * Number(document.formNPV.discountRate.value);
     var sumOfAnnual = 0;
     var maintenanceCost = 0;
     var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
-    //var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
-    for (var i = 1; i < pvLifeTime+1; i++) {
+    var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear-1) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear-1))/100.0;
+    for (var i = 0; i < pvLifeTime; i++) {
         var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
         sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
         maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
     };
     var npvVal = sumOfAnnual - investmentPerKW - investmentCost15/Math.pow(1.0+discountRate, 15) - maintenanceCost;
 
-    //annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual cashflow: <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
+    annualRevenue.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Annual revenue (total savings): <span style='font-size:20px'>" + Math.round(annualRevenueVal).toString() + "</span> NZD";
     npvEstimate.innerHTML = "<span style='display:inline-block; width: 20px;'></span>Net present value:: <span style='font-size:20px'>" + Math.round(npvVal).toString() + "</span> NZD";
 };
 
