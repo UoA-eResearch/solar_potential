@@ -436,8 +436,8 @@ function calculateAnnualRevenue() {
     var sumOfAnnual = 0;
     var maintenanceCost = 0;
     var annualRadiation = Number(document.getElementById('total-annual-radiation').value);
-    var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear))/100.0;
-    for (var i = 1; i < pvLifeTime+1; i++) {
+    var annualRevenueVal = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, theNthYear-1) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, theNthYear-1))/100.0;
+    for (var i = 0; i < pvLifeTime; i++) {
         var sumOfAnnualTmp = (annualRadiation * 0.01* selfConsumption * electricityPrice * Math.pow(0.99, i) + (1.0 - 0.01* selfConsumption) * annualRadiation * paybackRate * Math.pow(0.99, i))/100.0;
         sumOfAnnual = sumOfAnnual + sumOfAnnualTmp/Math.pow(1.0+discountRate, i);
         maintenanceCost = maintenanceCost + annualOperationMaintenanceCost / Math.pow(1.0 + discountRate, i);
