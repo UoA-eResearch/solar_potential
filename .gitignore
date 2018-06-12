@@ -3,3 +3,7 @@ misc
 *.png
 nohup.out
 .idea
+errorReportData.txt
+*.tif
+*.zip
+Solar_potential_rasters_with_circles/
