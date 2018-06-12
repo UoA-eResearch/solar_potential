@@ -424,6 +424,14 @@
 			<Parameter name="band">1</Parameter>
 		</Datasource>
 	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1EastTamaki_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1EastTamaki_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
 	<Layer name="Solar_potential_rasters_with_circles/Band_1EdenRoadHillTop_solar_buff.tif" srs="+init=epsg:2193">
 		<StyleName>OrRd</StyleName>
 		<Datasource>
@@ -952,6 +960,14 @@
 			<Parameter name="band">1</Parameter>
 		</Datasource>
 	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Karekare_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Karekare_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
 	<Layer name="Solar_potential_rasters_with_circles/Band_1KauriPark_solar_buff.tif" srs="+init=epsg:2193">
 		<StyleName>OrRd</StyleName>
 		<Datasource>
@@ -1136,6 +1152,14 @@
 			<Parameter name="band">1</Parameter>
 		</Datasource>
 	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MangereSouth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
 	<Layer name="Solar_potential_rasters_with_circles/Band_1MangereStation_solar_buff.tif" srs="+init=epsg:2193">
 		<StyleName>OrRd</StyleName>
 		<Datasource>
@@ -1148,6 +1172,14 @@
 		<StyleName>OrRd</StyleName>
 		<Datasource>
 			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Manly_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1ManukauCentral_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ManukauCentral_solar_buff.tif</Parameter>
 			<Parameter name="type">gdal</Parameter>
 			<Parameter name="band">1</Parameter>
 		</Datasource>
@@ -1348,6 +1380,14 @@
 		<StyleName>OrRd</StyleName>
 		<Datasource>
 			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtWellingtonNorth_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1MtWellingtonSouth_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1MtWellingtonSouth_solar_buff.tif</Parameter>
 			<Parameter name="type">gdal</Parameter>
 			<Parameter name="band">1</Parameter>
 		</Datasource>
@@ -1812,6 +1852,14 @@
 		<StyleName>OrRd</StyleName>
 		<Datasource>
 			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1ParrsPark_solar_buff.tif</Parameter>
+			<Parameter name="type">gdal</Parameter>
+			<Parameter name="band">1</Parameter>
+		</Datasource>
+	</Layer>
+	<Layer name="Solar_potential_rasters_with_circles/Band_1Penrose_solar_buff.tif" srs="+init=epsg:2193">
+		<StyleName>OrRd</StyleName>
+		<Datasource>
+			<Parameter name="file">Solar_potential_rasters_with_circles/Band_1Penrose_solar_buff.tif</Parameter>
 			<Parameter name="type">gdal</Parameter>
 			<Parameter name="band">1</Parameter>
 		</Datasource>
