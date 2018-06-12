@@ -33,7 +33,7 @@ def get_point():
     lng = request.query.lng
     if not lng:
       abort(500, "no lng given")
-    sql = """SELECT *, ST_ASTEXT(ST_TRANSFORM(the_geom, 3857)) AS the_geom FROM solar_potential WHERE ST_CONTAINS(the_geom, ST_TRANSFORM(ST_SetSRID(ST_POINT(%s, %s), 3857), 2193));"""
+    sql = """SELECT *, ST_ASTEXT(ST_TRANSFORM(geom, 3857)) AS the_geom FROM "solar_potential3" WHERE ST_CONTAINS(geom, ST_TRANSFORM(ST_SetSRID(ST_POINT(%s, %s), 3857), 2193));"""
     cur.execute(sql, (lng, lat))
     data = cur.fetchall()
     return {'results': data}
