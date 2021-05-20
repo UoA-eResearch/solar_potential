@@ -2,3 +2,5 @@ redis
 mapnik
 xmltodict
 TileStache
+psycopg2
+bottle
