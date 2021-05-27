@@ -113,7 +113,7 @@ var overlayGroup = new ol.layer.Group({
 
             title: 'Solar radiation',
             source: new ol.source.XYZ({
-                url: 'http://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
+                url: 'https://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
             }),
             extent: extent
         }),
@@ -238,7 +238,7 @@ map.on('singleclick', function(evt) {
     var issueFormElement = document.getElementById('issue');
     var coordinate_new = ol.proj.fromLonLat([174.766462, -36.891249]);
     issueFormElement.value = '';
-    $.get("http://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
+    $.get("https://solarpower.cer.auckland.ac.nz/click", {lng: coordinate[0], lat: coordinate[1]}, function(data) {
         if (data.results.length >= 1) {
             var r = data.results[0];
             /*console.log(r);*/
