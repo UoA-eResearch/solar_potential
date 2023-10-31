@@ -144,10 +144,10 @@ var overlayGroup = new ol.layer.Group({
 
         new ol.layer.Tile({
             title: 'City labels',
-            source: new ol.source.Stamen({
-                layer: 'toner-labels',
+            source: new ol.source.XYZ({
+                url: 'https://{a-c}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
             }),
-            opacity: .5
+            opacity: 1
         })
     ]
 });
