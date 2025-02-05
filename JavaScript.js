@@ -113,7 +113,7 @@ var overlayGroup = new ol.layer.Group({
 
             title: 'Solar radiation',
             source: new ol.source.XYZ({
-                url: 'https://cerasuoprd01.its.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
+                url: 'tiles/solar_potential_circles/{z}/{x}/{y}.png'
             }),
             extent: extent
         }),
