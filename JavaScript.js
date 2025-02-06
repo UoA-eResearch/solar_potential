@@ -113,7 +113,7 @@ var overlayGroup = new ol.layer.Group({
 
             title: 'Solar radiation',
             source: new ol.source.XYZ({
-                url: 'tiles/solar_potential_circles/{z}/{x}/{y}.png'
+                url: 'https://solarpower.cer.auckland.ac.nz/tiles/solar_potential_circles/{z}/{x}/{y}.png'
             }),
             extent: extent
         }),
@@ -132,7 +132,7 @@ var overlayGroup = new ol.layer.Group({
             source: source,
             style: new ol.style.Style({
                 fill: new ol.style.Fill({
-                    color: 'rgba(255, 255, 255, 0.5)'
+                    color: 'rgba(255, 255, 255, 0)'
                 }),
                 stroke: new ol.style.Stroke({
                     color: 'green',
@@ -200,7 +200,6 @@ var map = new ol.Map({
             })
         }),
         overlayGroup,
-        boundaryvector
 
     ],
     view: new ol.View({
@@ -238,10 +237,19 @@ map.on('singleclick', function (evt) {
     var issueFormElement = document.getElementById('issue');
     var coordinate_new = ol.proj.fromLonLat([174.766462, -36.891249]);
     issueFormElement.value = '';
-    $.get("https://solarpower.cer.auckland.ac.nz/click", { lng: coordinate[0], lat: coordinate[1] }, function (data) {
-        if (data.results.length >= 1) {
-            var r = data.results[0];
-            /*console.log(r);*/
+    console.log(coordinate)
+    $.getJSON("https://services2.arcgis.com/OKRmMRUG6dRnfUBh/ArcGIS/rest/services/Solar_potential_on_Auckland_rooftops_based_on_LiDAR_data_building_footprints_updated_23Aug2018/FeatureServer/0/query", {
+            geometry: `${coordinate[0]},${coordinate[1]}`,
+            geometryType: 'esriGeometryPoint',
+            inSR: 3857,
+            spatialRel: 'esriSpatialRelIntersects',
+            outFields: "*",
+            f: 'pgeojson'
+        }, function (data) {
+        if (data.features.length >= 1) {
+            var r = data.features[0].properties;
+            var geo = data.features[0].geometry;
+            console.log(r);
             /*var infoElement = document.getElementById('popup-content');*/
             var estimateElement = document.getElementById('popup-estimate');
             var addressInfoElement = document.getElementById('popup-content');
@@ -252,26 +260,26 @@ map.on('singleclick', function (evt) {
             var top28Val = document.getElementById('top-28');
             var top36Val = document.getElementById('top-36');
             //var annualRevenue = document.getElementById('popup-AnnualRevenue');
-            if (r.address == '_ _') r.address = "Address unknown";
-            /*var lines = ["<i>" + r.address.replace(/_/g, ', ') + "</i>",
+            if (r.Address == '_ _') r.Address = "Address unknown";
+            /*var lines = ["<i>" + r.Address.replace(/_/g, ', ') + "</i>",
              r.up_env,
-             "Top 14m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + "kWh/m²",
-             "Top 20m²: " + (Math.round(parseInt(r.top14) / 20)).toString() + "kWh/m²",
-             "Top 28m²: " + (Math.round(parseInt(r.top14) / 28)).toString() + "kWh/m²",
-             "Top 36m²: " + (Math.round(parseInt(r.top14) / 36)).toString() + "kWh/m²",
+             "Top 14m²: " + (Math.round(parseInt(r.Top14) / 14)).toString() + "kWh/m²",
+             "Top 20m²: " + (Math.round(parseInt(r.Top14) / 20)).toString() + "kWh/m²",
+             "Top 28m²: " + (Math.round(parseInt(r.Top14) / 28)).toString() + "kWh/m²",
+             "Top 36m²: " + (Math.round(parseInt(r.Top14) / 36)).toString() + "kWh/m²",
              "Mean: " + (parseInt(r.mean)).toString() + "kWh/m²",
              "Sum: " + (parseInt(r.sum)).toString() + "kWh",
              ];*/
-            var addressInfo = ["<i>" + r.address.replace(/_/g, ', ') + "</i>"];
-            var solarInfo = ["Top 14 m²: " + (Math.round(parseInt(r.top14) / 14)).toString() + " kWh/m²",
-            "Top 20 m²: " + (Math.round(parseInt(r.top20) / 20)).toString() + " kWh/m²",
-            "Top 28 m²: " + (Math.round(parseInt(r.top28) / 28)).toString() + " kWh/m²",
-            "Top 36 m²: " + (Math.round(parseInt(r.top36) / 36)).toString() + " kWh/m²"];
+            var addressInfo = ["<i>" + r.Address.replace(/_/g, ', ') + "</i>"];
+            var solarInfo = ["Top 14 m²: " + (Math.round(parseInt(r.Top14) / 14)).toString() + " kWh/m²",
+            "Top 20 m²: " + (Math.round(parseInt(r.Top20) / 20)).toString() + " kWh/m²",
+            "Top 28 m²: " + (Math.round(parseInt(r.Top28) / 28)).toString() + " kWh/m²",
+            "Top 36 m²: " + (Math.round(parseInt(r.Top36) / 36)).toString() + " kWh/m²"];
             var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
-            top14Val.value = (Math.round(parseInt(r.top14) / 14)).toString();
-            top20Val.value = (Math.round(parseInt(r.top20) / 20)).toString();
-            top28Val.value = (Math.round(parseInt(r.top28) / 28)).toString();
-            top36Val.value = (Math.round(parseInt(r.top36) / 36)).toString();
+            top14Val.value = (Math.round(parseInt(r.Top14) / 14)).toString();
+            top20Val.value = (Math.round(parseInt(r.Top20) / 20)).toString();
+            top28Val.value = (Math.round(parseInt(r.Top28) / 28)).toString();
+            top36Val.value = (Math.round(parseInt(r.Top36) / 36)).toString();
             addressInfoElement.innerHTML = addressInfo.join("<br>");
             solarInfoElement.innerHTML = solarInfo.join("<br>");
             solarInfoTotalElement.innerHTML = "<b>" + "Annual solar radiation on roof：</b><br/>" + solarInfoTotal;
@@ -286,18 +294,13 @@ map.on('singleclick', function (evt) {
             else if (sizeSelected == 36)
                 var annualGeneration = parseInt(top36Val.value) * parseInt(sizeSelected) * parseInt(efficiencySelected) * 0.01 * 0.88;
             annualRadiation.value = annualGeneration;
-
-            var wktStr = r.the_geom;
-            var parsedWKT = parseWKTToMultipolygonWKT(wktStr);
-            var wkt_format = new ol.format.WKT();
-            var polygonFeature = wkt_format.readFeature(parsedWKT, { dataProjection: 'EPSG:3857', featureProjection: 'EPSG:3857' });
-
-            source.clear();
-            source.addFeature(polygonFeature);
-            boundarySelected = 1;
-
             estimateElement.innerHTML = "Annual energy generation is:  <span style='font-size:20px'>" + Math.round(annualGeneration).toString() + "</span> kWh";
             calculateAnnualRevenue();
+
+            geo = new ol.format.GeoJSON().readFeature(geo, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
+            source.clear();
+            source.addFeature(geo);
+            boundarySelected = 1;
             //overlay.setPosition(coordinate);
         } else {
             console.log('No available info')
