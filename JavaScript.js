@@ -234,9 +234,7 @@ map.addControl(geocoder);
  */
 map.on('singleclick', function (evt) {
     var coordinate = evt.coordinate;
-    var issueFormElement = document.getElementById('issue');
     var coordinate_new = ol.proj.fromLonLat([174.766462, -36.891249]);
-    issueFormElement.value = '';
     console.log(coordinate)
     $.getJSON("https://services2.arcgis.com/OKRmMRUG6dRnfUBh/ArcGIS/rest/services/Solar_potential_on_Auckland_rooftops_based_on_LiDAR_data_building_footprints_updated_23Aug2018/FeatureServer/0/query", {
             geometry: `${coordinate[0]},${coordinate[1]}`,
@@ -371,24 +369,6 @@ dragAndDropInteraction.on('addfeatures', function (event) {
     map.getView().fit(
         vectorSource.getExtent(), /** @type {ol.Size} */(map.getSize())
     );
-});
-/**
- * add an event handler to submit issue reports
- */
-$('#issueForm').submit(function (event) {
-
-    /* stop form from submitting normally */
-    event.preventDefault();
-
-    /* get the action attribution from the <form action=""> element */
-    var $form = $(this), url = $form.attr('action');
-
-    /* send the data using post with element id "issue"*/
-    var posting = $.post(url, { issue: $('#issue').val(), address: $('#popup-content').text() });
-
-    posting.done(function (data) {
-        alert('You issue report has been submitted. Thank you.');
-    });
 });
 
 /**
