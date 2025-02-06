@@ -275,7 +275,7 @@ map.on('singleclick', function (evt) {
             "Top 20 m²: " + (Math.round(parseInt(r.Top20) / 20)).toString() + " kWh/m²",
             "Top 28 m²: " + (Math.round(parseInt(r.Top28) / 28)).toString() + " kWh/m²",
             "Top 36 m²: " + (Math.round(parseInt(r.Top36) / 36)).toString() + " kWh/m²"];
-            var solarInfoTotal = (parseInt(r.sum)).toLocaleString() + " kWh";
+            var solarInfoTotal = (parseInt(r.Sum_)).toLocaleString() + " kWh";
             top14Val.value = (Math.round(parseInt(r.Top14) / 14)).toString();
             top20Val.value = (Math.round(parseInt(r.Top20) / 20)).toString();
             top28Val.value = (Math.round(parseInt(r.Top28) / 28)).toString();
