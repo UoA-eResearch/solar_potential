@@ -1,9 +1,15 @@
-#Solar potential map
+# Solar potential map
 
-#Installation
-`sudo apt-get install redis-server apache2 libapache2-mod-python`  
-`sudo pip install -r requirements.txt`  
+Shows annual solar potential estimates for rooftops in the Auckland region.
 
-#Config
-Copy example_apache2.conf to /etc/apache2/sites-enabled and make edits where appropriate  
-`sudo apache2 reload`  
+Tiles are served with GitHub pages. The building footprints shapefile is on ArcGIS Online, so can be queried via the WFS JSON API.
+
+# Installation
+`pip install -r requirements.txt`
+
+# Generating styles
+
+`./generate_styles.py`
+
+# Rendering tiles
+`./render.sh`  
