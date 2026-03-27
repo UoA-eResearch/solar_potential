@@ -131,3 +131,53 @@ a:visited {
     overflow-y: auto;
     /*width: 220px !important;*/
 }
+
+/* Mobile / small screen responsive styles */
+@media (max-width: 600px) {
+    #legend {
+        width: 100%;
+        font-size: 10px;
+        box-sizing: border-box;
+    }
+
+    .info-window {
+        width: 100%;
+        height: 45%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 10px 10px 0 0;
+        box-sizing: border-box;
+    }
+
+    .instructions-window {
+        width: 90%;
+        height: auto;
+        top: auto;
+        bottom: 46%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    .ol-zoom {
+        top: auto !important;
+        bottom: 50% !important;
+    }
+
+    .ol-zoomslider {
+        display: none !important;
+    }
+
+    .layer-switcher {
+        top: 10px !important;
+        right: auto !important;
+        left: 10px !important;
+    }
+
+    .layer-switcher.shown {
+        right: auto !important;
+    }
+}
