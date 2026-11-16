@@ -144,8 +144,11 @@ var overlayGroup = new ol.layer.Group({
 
         new ol.layer.Tile({
             title: 'City labels',
+            // CARTO basemaps now require an API key, so use Esri's free
+            // place-name reference layer (designed to sit over World Imagery).
             source: new ol.source.XYZ({
-                url: 'https://{a-c}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
+                url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+                attributions: 'Labels &copy; <a href="https://www.esri.com/">Esri</a>'
             }),
             opacity: 1
         })
@@ -215,15 +218,44 @@ var map = new ol.Map({
 /**
  * add a geocoder to map
  */
+// ol-geocoder's built-in 'osm' provider requests
+// https://nominatim.openstreetmap.org/search/ (trailing slash), which Nominatim
+// now answers with 404. This custom provider uses the current /search endpoint.
+var nominatimProvider = {
+    getParameters: function (options) {
+        return {
+            url: 'https://nominatim.openstreetmap.org/search',
+            params: {
+                q: options.query,
+                format: 'json',
+                addressdetails: 1,
+                limit: options.limit,
+                countrycodes: options.countrycodes,
+                'accept-language': options.lang
+            }
+        };
+    },
+    handleResponse: function (results) {
+        return results.map(function (result) {
+            return {
+                lon: result.lon,
+                lat: result.lat,
+                address: { name: result.display_name },
+                original: { formatted: result.display_name, details: result.address }
+            };
+        });
+    }
+};
+
 var geocoder = new Geocoder('nominatim', {
-    provider: 'osm',
-    key: '__some_key__',
+    provider: nominatimProvider,
     lang: 'en', //en-US, fr-FR
-    placeholder: 'Search for ',
+    placeholder: 'Search for an address',
     targetType: 'text-input',
     limit: 5,
     keepOpen: false,
-    autoComplete: true,
+    // Nominatim's usage policy forbids autocomplete, so search on Enter.
+    autoComplete: false,
     countrycodes: "NZ",
     preventDefault: false
 });
